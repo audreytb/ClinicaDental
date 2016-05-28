@@ -29,22 +29,49 @@
           
 
         </div>
+        <div class="container" id="main">
+          <nav class="navbar navbar-static-top ">
+              <div class="navbar-header navbar-inverse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1"><!--Con el # vamos estamos diciendole que va apuntar a un Id ="navbar-1 el cual vemos abajo"-->
+                  <span  class="sr-only"></span>
+                  <span  class="icon-bar"></span>
+                  <span  class="icon-bar"></span>
+                  <span  class="icon-bar"></span>
+                <!--cada span que pusimos en una rayita en nuestro menu para dispositivos moviles-->
+                </button>
+
+
+              </div>
+              <div class="collapse navbar-collapse" id="navbar-1">
+                
+                <form action="" class="navbar-form navbar-right role="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Buscar">
+                  </div>
+                </form>
+
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="">Consultar</a></li>
+                  <li><a href="">Calendario</a></li>
+                  <li><a href="">Registrar</a></li>
+                  <li><a href="">Eliminar</a></li>
+                </ul>
+              </div>
+          </nav>
+        </div>
 
       </header>
       <div class="container">
         <section class="main row">
-          <article class="col-xs-12 col-sm-4  col-md-4  col-lg-3.5">
-            <a href="#"><img id="docLogin" src="images/admin1.png" class="img-responsive" alt="DoctorLogin"></a>
-            <span class="usuario" class="col xs-2"><h3>Administrador</h3></span>
+          <article class="col-xs-6 col-sm-4  col-md-6  col-lg-6">
+            <a href="#"><img id="docLogin" src="images/admin1.png" class="img-responsive" alt="DoctorLogin"></a><br>
+            <span class="usuario"><h3>Admin</h3></span>
           </article> 
-          <article class="col-xs-12 col-sm-4  col-md-4  col-lg-3.5">
-            <a href="#"><img id="userLogin" src="images/user1.png" class="img-responsive" alt="UserLogin"></a>
-            <span class="usuario"><h3>Usuarios</h3></span>
+          <article class="col-xs-6 col-sm-4  col-md-6  col-lg-6">
+            <a href="#"><img id="userLogin" src="images/user1.png" class="img-responsive" alt="UserLogin"></a><br>
+            <span class="usuario" ><h3>Users</h3></span>
           </article>
-          <article class="col-xs-12 col-sm-4  col-md-4  col-lg-3.5">
-            <a href="#" ><img  src="images/userNew1.png "  id="newUserLogin" class="img-responsive" alt="NewUserLogin"></a>
-            <span class="usuario"><h3>Nuevos Usuarios</h3></span>
-          </article>
+     
 
           
         </section>

@@ -119,3 +119,8 @@ footer{
 	margin-left: 10%;
 	color: #302E2E;
 }
+
+#main{
+	background-color: #fff;
+	position: relative;
+}
