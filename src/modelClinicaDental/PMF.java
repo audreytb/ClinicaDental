@@ -1,4 +1,4 @@
-package pw2;
+package modelClinicaDental;
 import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManagerFactory;
 public final class PMF {
