@@ -13,4 +13,21 @@ public class Patient_discharge <T>{
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
 	@Persistent private T patientDischarge;
+	public Patient_discharge(T patientDischarge) {
+		super();
+		this.patientDischarge = patientDischarge;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public T getPatientDischarge() {
+		return patientDischarge;
+	}
+	public void setPatientDischarge(T patientDischarge) {
+		this.patientDischarge = patientDischarge;
+	}
+	
 }
