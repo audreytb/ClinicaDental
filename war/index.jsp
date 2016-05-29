@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Clinica Dental</title>
 	<meta name="viewport"
 		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css ">
@@ -19,7 +19,7 @@
 	
 	<div class="container">
 		<section class="main row"> <article
-			class="col-xs-6 col-sm-4  col-md-6  col-lg-6"> <a href="#"><img
+			class="col-xs-6 col-sm-4  col-md-6  col-lg-6"> <a href="loginAdmin.jsp"><img
 			id="docLogin" src="images/admin1.png" class="img-responsive"
 			alt="DoctorLogin"></a> <br>
 		<span class="usuario"><h3>Admin</h3></span> </article> <article
