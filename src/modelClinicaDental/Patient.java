@@ -31,13 +31,14 @@ public class Patient <T>{
 	@Persistent private T place_origin;
 	@Persistent private T current_address;
 	@Persistent private T name_lastName_companion;
-	@Persistent String website;
+	
+	@Persistent private Dentist<T> dentista;
+	@Persistent private Query<T> [] query;
 	public Patient(T name, T last_name, T number_historia_clinica, T number_dni, T date_time_care,
 			T opening_date_medical_history, T sex, T age, T birthplace, T birthdate, T degree_instruction, T race,
 			T occupation, T religion, T cvil_status, T place_origin, T current_address, T name_lastName_companion,
-			String website) {
+			Dentist<T> dentista) {
 		super();
-	
 		this.name = name;
 		this.last_name = last_name;
 		this.number_historia_clinica = number_historia_clinica;
@@ -56,7 +57,33 @@ public class Patient <T>{
 		this.place_origin = place_origin;
 		this.current_address = current_address;
 		this.name_lastName_companion = name_lastName_companion;
-		this.website = website;
+		this.dentista = dentista;
+	}
+	public Patient(T name, T last_name, T number_historia_clinica, T number_dni, T date_time_care,
+			T opening_date_medical_history, T sex, T age, T birthplace, T birthdate, T degree_instruction, T race,
+			T occupation, T religion, T cvil_status, T place_origin, T current_address, T name_lastName_companion,
+			Dentist<T> dentista, Query<T>[] query) {
+		super();
+		this.name = name;
+		this.last_name = last_name;
+		this.number_historia_clinica = number_historia_clinica;
+		this.number_dni = number_dni;
+		this.date_time_care = date_time_care;
+		this.opening_date_medical_history = opening_date_medical_history;
+		this.sex = sex;
+		this.age = age;
+		this.birthplace = birthplace;
+		this.birthdate = birthdate;
+		this.degree_instruction = degree_instruction;
+		this.race = race;
+		this.occupation = occupation;
+		this.religion = religion;
+		this.cvil_status = cvil_status;
+		this.place_origin = place_origin;
+		this.current_address = current_address;
+		this.name_lastName_companion = name_lastName_companion;
+		this.dentista = dentista;
+		this.query = query;
 	}
 	public Long getId() {
 		return id;
@@ -172,14 +199,24 @@ public class Patient <T>{
 	public void setName_lastName_companion(T name_lastName_companion) {
 		this.name_lastName_companion = name_lastName_companion;
 	}
-	public String getWebsite() {
-		return website;
+	public Dentist<T> getDentista() {
+		return dentista;
 	}
-	public void setWebsite(String website) {
-		this.website = website;
+	public void setDentista(Dentist<T> dentista) {
+		this.dentista = dentista;
 	}
-		
+	public Query<T>[] getQuery() {
+		return query;
+	}
+	public void setQuery(Query<T>[] query) {
+		this.query = query;
+	}
+	
+	
+	
 
+	
+	
 	
 	
 	

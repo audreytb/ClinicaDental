@@ -19,8 +19,9 @@ public class Treatment_recomendation <T>{
 	@Persistent private T care;
 	@Persistent private T hygiene_measures_dietary;
 	@Persistent private T preventive;
+	@Persistent private Query<T> query;
 	public Treatment_recomendation(T treatmentRecomendations, T generic_drug_name, T dose, T way_administration, T care,
-			T hygiene_measures_dietary, T preventive) {
+			T hygiene_measures_dietary, T preventive, Query<T> query) {
 		super();
 		this.treatmentRecomendations = treatmentRecomendations;
 		this.generic_drug_name = generic_drug_name;
@@ -29,6 +30,7 @@ public class Treatment_recomendation <T>{
 		this.care = care;
 		this.hygiene_measures_dietary = hygiene_measures_dietary;
 		this.preventive = preventive;
+		this.query = query;
 	}
 	public Long getId() {
 		return id;
@@ -78,5 +80,12 @@ public class Treatment_recomendation <T>{
 	public void setPreventive(T preventive) {
 		this.preventive = preventive;
 	}
+	public Query<T> getQuery() {
+		return query;
+	}
+	public void setQuery(Query<T> query) {
+		this.query = query;
+	}
+	
 	
 }

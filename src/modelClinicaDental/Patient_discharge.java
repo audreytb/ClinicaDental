@@ -13,9 +13,11 @@ public class Patient_discharge <T>{
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
 	@Persistent private T patientDischarge;
-	public Patient_discharge(T patientDischarge) {
+	@Persistent private Query<T> query;
+	public Patient_discharge(T patientDischarge, Query<T> query) {
 		super();
 		this.patientDischarge = patientDischarge;
+		this.query = query;
 	}
 	public Long getId() {
 		return id;
@@ -29,5 +31,12 @@ public class Patient_discharge <T>{
 	public void setPatientDischarge(T patientDischarge) {
 		this.patientDischarge = patientDischarge;
 	}
+	public Query<T> getQuery() {
+		return query;
+	}
+	public void setQuery(Query<T> query) {
+		this.query = query;
+	}
+	
 	
 }

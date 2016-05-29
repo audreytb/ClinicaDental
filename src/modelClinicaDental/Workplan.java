@@ -13,15 +13,12 @@ public class Workplan <T>{
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
 	@Persistent private T work_plan;
-	
-	
-	public Workplan(T work_plan) {
+	@Persistent private Query<T> query;
+	public Workplan(T work_plan, Query<T> query) {
 		super();
 		this.work_plan = work_plan;
+		this.query = query;
 	}
-
-
-
 	public Long getId() {
 		return id;
 	}
@@ -34,5 +31,14 @@ public class Workplan <T>{
 	public void setWork_plan(T work_plan) {
 		this.work_plan = work_plan;
 	}
+	public Query<T> getQuery() {
+		return query;
+	}
+	public void setQuery(Query<T> query) {
+		this.query = query;
+	}
+	
+	
+	
 	
 }

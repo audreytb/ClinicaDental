@@ -14,11 +14,12 @@ public class Diagnosis <T>{
 	id;
 	@Persistent private T presumptive_diagnosis;
 	@Persistent private T definitive_diagnosis;
-	public Diagnosis( T presumptive_diagnosis, T definitive_diagnosis) {
+	@Persistent private Query<T> query;
+	public Diagnosis(T presumptive_diagnosis, T definitive_diagnosis, Query<T> query) {
 		super();
-		
 		this.presumptive_diagnosis = presumptive_diagnosis;
 		this.definitive_diagnosis = definitive_diagnosis;
+		this.query = query;
 	}
 	public Long getId() {
 		return id;
@@ -38,5 +39,12 @@ public class Diagnosis <T>{
 	public void setDefinitive_diagnosis(T definitive_diagnosis) {
 		this.definitive_diagnosis = definitive_diagnosis;
 	}
+	public Query<T> getQuery() {
+		return query;
+	}
+	public void setQuery(Query<T> query) {
+		this.query = query;
+	}
+	
 	
 }

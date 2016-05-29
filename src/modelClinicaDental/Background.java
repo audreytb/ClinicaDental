@@ -14,11 +14,12 @@ public class Background<T> {
 	id;
 	@Persistent private T family_background;
 	@Persistent private T personal_history;
-	public Background(T family_background, T personal_history) {
+	@Persistent private Query<T> query;
+	public Background(T family_background, T personal_history, Query<T> query) {
 		super();
-
 		this.family_background = family_background;
 		this.personal_history = personal_history;
+		this.query = query;
 	}
 	public Long getId() {
 		return id;
@@ -38,6 +39,14 @@ public class Background<T> {
 	public void setPersonal_history(T personal_history) {
 		this.personal_history = personal_history;
 	}
+	public Query<T> getQuery() {
+		return query;
+	}
+	public void setQuery(Query<T> query) {
+		this.query = query;
+	}
+	
+	
 	
 	
 	

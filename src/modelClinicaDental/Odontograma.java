@@ -13,9 +13,11 @@ public class Odontograma <T>{
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
 	@Persistent private T odontogram;
-	public Odontograma(T odontogram) {
+	@Persistent private Query<T> query;
+	public Odontograma(T odontogram, Query<T> query) {
 		super();
 		this.odontogram = odontogram;
+		this.query = query;
 	}
 	public Long getId() {
 		return id;
@@ -29,5 +31,13 @@ public class Odontograma <T>{
 	public void setOdontogram(T odontogram) {
 		this.odontogram = odontogram;
 	}
+	public Query<T> getQuery() {
+		return query;
+	}
+	public void setQuery(Query<T> query) {
+		this.query = query;
+	}
+	
+	
 	
 }

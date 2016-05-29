@@ -19,10 +19,10 @@ public class Current_illness <T>{
 	@Persistent private T signs_symptoms_main;
 	@Persistent private T chronological_story;
 	@Persistent private T biological_functions;
-	public Current_illness( T enfermedad_actual, T data_reporting, T reason_consultation, T sick_time,
-			T signs_symptoms_main, T chronological_story, T biological_functions) {
+	@Persistent private Query<T> query;
+	public Current_illness(T enfermedad_actual, T data_reporting, T reason_consultation, T sick_time,
+			T signs_symptoms_main, T chronological_story, T biological_functions, Query<T> query) {
 		super();
-
 		this.enfermedad_actual = enfermedad_actual;
 		this.data_reporting = data_reporting;
 		this.reason_consultation = reason_consultation;
@@ -30,6 +30,7 @@ public class Current_illness <T>{
 		this.signs_symptoms_main = signs_symptoms_main;
 		this.chronological_story = chronological_story;
 		this.biological_functions = biological_functions;
+		this.query = query;
 	}
 	public Long getId() {
 		return id;
@@ -79,6 +80,14 @@ public class Current_illness <T>{
 	public void setBiological_functions(T biological_functions) {
 		this.biological_functions = biological_functions;
 	}
+	public Query<T> getQuery() {
+		return query;
+	}
+	public void setQuery(Query<T> query) {
+		this.query = query;
+	}
+	
+	
 	
 	
 	

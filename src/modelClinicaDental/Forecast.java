@@ -13,9 +13,11 @@ public class Forecast <T>{
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
 	@Persistent private T fore_cast;
-	public Forecast(T fore_cast) {
+	@Persistent private Query<T> query;
+	public Forecast(T fore_cast, Query<T> query) {
 		super();
 		this.fore_cast = fore_cast;
+		this.query = query;
 	}
 	public Long getId() {
 		return id;
@@ -29,5 +31,13 @@ public class Forecast <T>{
 	public void setFore_cast(T fore_cast) {
 		this.fore_cast = fore_cast;
 	}
+	public Query<T> getQuery() {
+		return query;
+	}
+	public void setQuery(Query<T> query) {
+		this.query = query;
+	}
+	
+	
 	
 	}
