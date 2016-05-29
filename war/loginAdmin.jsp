@@ -16,9 +16,42 @@
 		
 		<div class="container">
 			<div id="contenido">
+				<div id="izq">
 					
+						<article class="col-xs-8 col-sm-10  col-md-10 col-lg-12"> 
+							<img id="imgAdmin" src="images/adminlogin.png" class="img-responsive" alt="DoctorLogin">
+						</article> 
+					
+				</div>
+				
+				<div id="der">
+					<form action="" class="form-horizontal">
+						<fieldset> <!--disables para bloquear todo el form-->
+							<div class="form-group has-success">
+								<label for="nombre" class="control-label col-md-2 col-lg-3">Nombre:</label>
+								<div class="col-md-10 col-lg-12">
+									<input type="text" class="form-control" id="nombre"placeholder="Nombre">
+								</div>
+							</div>	
+					
+							<div class="form-group has-error">
+								<label for="correo" class="control-label col-md-2 col-lg-3">Pasword:</label>
+								<div class="col-md-10 col-lg-12">
+									<input type="text" class="form-control" id="correo" placeholder="Correo">
+									<!--disabled permite bloquear propiedades-->
+								</div>
+							</div>
+					
+							<div class="form-group">
+								<div class="col-md-2 col-md-offset-2">
+									<button class="btn btn-info">Iniciar sesion</button>
+								</div>
+							</div>
+						</fielset>
+					</form>
+				</div>	
+			
 			</div>
-		
 		</div>
 		
 		<script src="js/jquery.js"></script>
