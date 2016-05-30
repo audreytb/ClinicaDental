@@ -5,14 +5,17 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
-		<servlet-name>ClinicaDental</servlet-name>
-		<servlet-class>controllerClinicaDental.ClinicaDentalServlet</servlet-class>
+		<servlet-name>Log_in</servlet-name>
+		<servlet-class>controllerClinicaDental.Login</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>ClinicaDental</servlet-name>
-		<url-pattern>/clinicadental</url-pattern>
+		<servlet-name>Log_in</servlet-name>
+		<url-pattern>/login</url-pattern>
 	</servlet-mapping>
+	
+	
+	
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>
