@@ -10,8 +10,19 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ClinicaDental</servlet-name>
-		<url-pattern>/clinicadental</url-pattern>
+		<url-pattern>/clinicaDental</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Log_in</servlet-name>
+		<servlet-class>controllerClinicaDental.web.Log_in</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Log_in</servlet-name>
+		<url-pattern>/log_in</url-pattern>
+	</servlet-mapping>
+	
+	
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
