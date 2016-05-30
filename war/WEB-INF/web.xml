@@ -4,18 +4,11 @@ xmlns="http://java.sun.com/xml/ns/javaee"
 xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-	<servlet>
-		<servlet-name>ClinicaDental</servlet-name>
-		<servlet-class>project.web.ClinicaDentalServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ClinicaDental</servlet-name>
-		<url-pattern>/clinicaDental</url-pattern>
-	</servlet-mapping>
+	
 	
 	<servlet>
 		<servlet-name>Log_in</servlet-name>
-		<servlet-class>controllerClinicaDental.web.Log_in</servlet-class>
+		<servlet-class>controllerClinicaDental.Log_in</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Log_in</servlet-name>
