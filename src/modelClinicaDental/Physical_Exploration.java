@@ -8,7 +8,7 @@ import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
-public class Physical_exploration<T> {
+public class Physical_Exploration<T> {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
@@ -22,7 +22,7 @@ public class Physical_exploration<T> {
 	
 	@Persistent private Query<T> query;
 
-	public Physical_exploration(T vitalSigns_pa, T vitalSigns_pulso, T vitalSigns_temp, T vitalSigns_fc,
+	public Physical_Exploration(T vitalSigns_pa, T vitalSigns_pulso, T vitalSigns_temp, T vitalSigns_fc,
 			T vitalSigns_frecResp, T clinica_examination, T odontoestomatologico, Query<T> query) {
 		super();
 		this.vitalSigns_pa = vitalSigns_pa;

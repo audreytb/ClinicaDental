@@ -25,26 +25,26 @@
 				</div>
 				
 				<div id="der">
-					<form action="login" method="get" class="form-horizontal">
+					<form action="/login" method="get"  class="form-horizontal">
 						<fieldset> <!--disables para bloquear todo el form-->
 							<div class="form-group has-success">
 								<label for="nombre" class="control-label col-md-2 col-lg-3">Nombre:</label>
 								<div class="col-md-10 col-lg-12">
-									<input type="text" class="form-control" id="nombre"placeholder="Nombre">
+									<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
 								</div>
 							</div>	
 					
 							<div class="form-group has-error">
 								<label for="correo" class="control-label col-md-2 col-lg-3">Pasword:</label>
 								<div class="col-md-10 col-lg-12">
-									<input type="text" class="form-control" id="clave" placeholder="Correo">
+									<input type="text" class="form-control" id="clave" name="clave" placeholder="Correo">
 									<!--disabled permite bloquear propiedades-->
 								</div>
 							</div>
 					
 							<div class="form-group">
 								<div class="col-md-2 col-md-offset-2">
-									<button  class="btn btn-info">Iniciar sesion</button>
+									<button  type ="submit" class="btn btn-info" >Iniciar sesion</button>
 								</div>
 							</div>
 						</fielset>

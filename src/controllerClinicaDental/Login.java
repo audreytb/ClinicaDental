@@ -10,21 +10,25 @@ import javax.servlet.http.*;
 public class Login extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
-		resp.setContentType("text/HTML");
+	
 		String nombre=req.getParameter("nombre");
 		String correo=req.getParameter("clave");
 		
+		System.out.println(nombre+correo);
+		
+		
+		/**
 		if(nombre.equalsIgnoreCase("flores")&&correo.equalsIgnoreCase("flores")){
 			
 			HttpSession misesion= req.getSession(true);
 			misesion.setAttribute("nombre","Juan Perez");
 			misesion.setAttribute("correo","jperez@gmail.com");
 			
-			resp.sendRedirect("consultaPaciente.jsp");
+			
 			}
 		else{
 			resp.sendRedirect("loginAdmin.jsp");
 		}
-			
+			**/
 	}
 }

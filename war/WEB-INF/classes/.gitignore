@@ -1,4 +1,5 @@
-/META-INF/
+/model/
+/controller/
 /controllerClinicaDental/
-/log4j.properties
 /modelClinicaDental/
+/viewClinicaDental/

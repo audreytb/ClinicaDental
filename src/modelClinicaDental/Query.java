@@ -14,21 +14,21 @@ public class Query<T> {
 	id;
 	@Persistent private T query;
 	@Persistent private Background<T> background;
-	@Persistent private Current_illness<T> current_illness;
+	@Persistent private Current_Illness<T> current_illness;
 	@Persistent private Diagnosis<T> diagnosis;
 	@Persistent private Forecast<T> forecast;
 	@Persistent private Odontograma<T> odontograma;
-	@Persistent private Patient_discharge<T> patient_discharge;
-	@Persistent private Physical_exploration<T> physical_exploration;
-	@Persistent private Treatment_recomendation<T> treatment_recomendation;
+	@Persistent private Patient_Discharge<T> patient_discharge;
+	@Persistent private Physical_Exploration<T> physical_exploration;
+	@Persistent private Treatment_Recomendation<T> treatment_recomendation;
 	@Persistent private Workplan<T> workplan;
 	@Persistent private Patient<T> patient;
 	
 	
 	
-	public Query(T query, Background<T> background, Current_illness<T> current_illness, Diagnosis<T> diagnosis,
-			Forecast<T> forecast, Odontograma<T> odontograma, Patient_discharge<T> patient_discharge,
-			Physical_exploration<T> physical_exploration, Treatment_recomendation<T> treatment_recomendation,
+	public Query(T query, Background<T> background, Current_Illness<T> current_illness, Diagnosis<T> diagnosis,
+			Forecast<T> forecast, Odontograma<T> odontograma, Patient_Discharge<T> patient_discharge,
+			Physical_Exploration<T> physical_exploration, Treatment_Recomendation<T> treatment_recomendation,
 			Workplan<T> workplan, Patient<T> patient) {
 		super();
 		this.query = query;
@@ -65,10 +65,10 @@ public class Query<T> {
 	public void setBackground(Background<T> background) {
 		this.background = background;
 	}
-	public Current_illness<T> getCurrent_illness() {
+	public Current_Illness<T> getCurrent_illness() {
 		return current_illness;
 	}
-	public void setCurrent_illness(Current_illness<T> current_illness) {
+	public void setCurrent_illness(Current_Illness<T> current_illness) {
 		this.current_illness = current_illness;
 	}
 	public Diagnosis<T> getDiagnosis() {
@@ -89,22 +89,22 @@ public class Query<T> {
 	public void setOdontograma(Odontograma<T> odontograma) {
 		this.odontograma = odontograma;
 	}
-	public Patient_discharge<T> getPatient_discharge() {
+	public Patient_Discharge<T> getPatient_discharge() {
 		return patient_discharge;
 	}
-	public void setPatient_discharge(Patient_discharge<T> patient_discharge) {
+	public void setPatient_discharge(Patient_Discharge<T> patient_discharge) {
 		this.patient_discharge = patient_discharge;
 	}
-	public Physical_exploration<T> getPhysical_exploration() {
+	public Physical_Exploration<T> getPhysical_exploration() {
 		return physical_exploration;
 	}
-	public void setPhysical_exploration(Physical_exploration<T> physical_exploration) {
+	public void setPhysical_exploration(Physical_Exploration<T> physical_exploration) {
 		this.physical_exploration = physical_exploration;
 	}
-	public Treatment_recomendation<T> getTreatment_recomendation() {
+	public Treatment_Recomendation<T> getTreatment_recomendation() {
 		return treatment_recomendation;
 	}
-	public void setTreatment_recomendation(Treatment_recomendation<T> treatment_recomendation) {
+	public void setTreatment_recomendation(Treatment_Recomendation<T> treatment_recomendation) {
 		this.treatment_recomendation = treatment_recomendation;
 	}
 	public Workplan<T> getWorkplan() {

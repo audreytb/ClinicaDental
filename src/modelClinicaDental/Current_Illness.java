@@ -8,7 +8,7 @@ import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
-public class Current_illness <T>{
+public class Current_Illness <T>{
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
@@ -20,7 +20,7 @@ public class Current_illness <T>{
 	@Persistent private T chronological_story;
 	@Persistent private T biological_functions;
 	@Persistent private Query<T> query;
-	public Current_illness(T enfermedad_actual, T data_reporting, T reason_consultation, T sick_time,
+	public Current_Illness(T enfermedad_actual, T data_reporting, T reason_consultation, T sick_time,
 			T signs_symptoms_main, T chronological_story, T biological_functions, Query<T> query) {
 		super();
 		this.enfermedad_actual = enfermedad_actual;
