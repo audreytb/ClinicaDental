@@ -43,8 +43,8 @@
 				</form>
 	
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="">Consultar</a></li>
-					<li><a href="">Calendario</a></li>
+					<li class="active"><a href="consultaPaciente.jsp">Consultar</a></li>
+					<li><a href="calendario.jsp">Calendario</a></li>
 					<li><a href="">Registrar</a></li>
 					<li><a href="">Eliminar</a></li>
 				</ul>

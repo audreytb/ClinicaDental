@@ -18,7 +18,7 @@
 			<div id="contenido">
 				<div id="izq">
 					
-						<article class="col-xs-8 col-sm-10  col-md-10 col-lg-12"> 
+						<article class="col-xs-8 col-sm-10  col-md-10 col-lg-8"> 
 							<img id="imgAdmin" src="images/adminlogin.png" class="img-responsive" alt="DoctorLogin">
 						</article> 
 					

@@ -153,3 +153,12 @@ Css ConsultaPaciente
     width: 100%;
     z-index: 1;
 }
+/**
+Css Nuevo Historial
+**/
+#boton1{
+	float:left;
+}
+#boton2{
+	float:right;
+}
