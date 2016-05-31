@@ -40,7 +40,7 @@
 					<li class="active"><a href="consultaPaciente.jsp">Consultar</a></li>
 					<li><a href="calendario.jsp">Calendario</a></li>
 					<li><a href="registrar.jsp">Registrar</a></li>
-					<li><a href="">Eliminar</a></li>
+					<li><a href="eliminar.jsp">Eliminar</a></li>
 				</ul>
 			</div>
 		</nav>
