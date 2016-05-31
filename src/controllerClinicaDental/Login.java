@@ -12,23 +12,18 @@ public class Login extends HttpServlet {
 			throws IOException {
 	
 		String nombre=req.getParameter("nombre");
-		String correo=req.getParameter("clave");
-		
-		System.out.println(nombre+correo);
+		String clave=req.getParameter("clave");
 		
 		
-		/**
-		if(nombre.equalsIgnoreCase("flores")&&correo.equalsIgnoreCase("flores")){
-			
+		if(nombre.equalsIgnoreCase("Dr. Flores")&&clave.equalsIgnoreCase("Dr. Flores")){
 			HttpSession misesion= req.getSession(true);
 			misesion.setAttribute("nombre","Juan Perez");
 			misesion.setAttribute("correo","jperez@gmail.com");
 			
-			
-			}
-		else{
-			resp.sendRedirect("loginAdmin.jsp");
+			resp.sendRedirect("consultaPaciente.jsp");
 		}
-			**/
+		else
+			resp.sendRedirect("loginAdmin.jsp");
+	
 	}
 }

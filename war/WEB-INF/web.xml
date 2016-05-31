@@ -21,6 +21,14 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/clinicaDentalServlet</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>Search_Dni</servlet-name>
+		<servlet-class>controllerClinicaDental.Search_Dni</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Search_Dni</servlet-name>
+		<url-pattern>/search_Dni</url-pattern>
+	</servlet-mapping>
 	
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>

@@ -18,6 +18,9 @@ public class Dentist <T>{
 	@Persistent private Patient<T>[] patient;
 	@Persistent private Calendar<T> calendar;
 	
+	public Dentist() {
+		super();
+	}
 	public Dentist(T name, T last_name, T tuition, Patient<T>[] patient, Calendar<T> calendar) {
 		super();
 		this.name = name;

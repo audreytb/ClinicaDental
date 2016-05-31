@@ -6,7 +6,9 @@ import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
-
+import java.util.ArrayList;
+import java.util.List;
+import com.google.appengine.datanucleus.annotations.Unowned;
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
 public class Patient <T>{
 	@PrimaryKey
@@ -32,8 +34,12 @@ public class Patient <T>{
 	@Persistent private T current_address;
 	@Persistent private T name_lastName_companion;
 	
-	@Persistent private Dentist<T> dentista;
-	@Persistent private Query<T> [] query;
+	@Persistent @Unowned private Dentist<T> dentista=new Dentist<T>();
+	//private int[] hola=new int[2];
+	//(T[]) new Object[capacidad];
+	//private List<Color> color = new ArrayList<Color>();
+	//@Persistent private Query<T>[] query=(Query<T>[]) new Object[2];
+	@Persistent private List<Query<T>> query= new ArrayList <Query<T>>();
 	public Patient(T name, T last_name, T number_historia_clinica, T number_dni, T date_time_care,
 			T opening_date_medical_history, T sex, T age, T birthplace, T birthdate, T degree_instruction, T race,
 			T occupation, T religion, T cvil_status, T place_origin, T current_address, T name_lastName_companion,
@@ -62,7 +68,7 @@ public class Patient <T>{
 	public Patient(T name, T last_name, T number_historia_clinica, T number_dni, T date_time_care,
 			T opening_date_medical_history, T sex, T age, T birthplace, T birthdate, T degree_instruction, T race,
 			T occupation, T religion, T cvil_status, T place_origin, T current_address, T name_lastName_companion,
-			Dentist<T> dentista, Query<T>[] query) {
+			Dentist<T> dentista, List<Query<T>> query) {
 		super();
 		this.name = name;
 		this.last_name = last_name;
@@ -205,12 +211,15 @@ public class Patient <T>{
 	public void setDentista(Dentist<T> dentista) {
 		this.dentista = dentista;
 	}
-	public Query<T>[] getQuery() {
+	public List<Query<T>> getQuery() {
 		return query;
 	}
-	public void setQuery(Query<T>[] query) {
+	public void setQuery(List<Query<T>> query) {
 		this.query = query;
 	}
+	
+	
+	
 	
 	
 	

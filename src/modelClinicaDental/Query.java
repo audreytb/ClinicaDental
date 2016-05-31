@@ -26,6 +26,9 @@ public class Query<T> {
 	
 	
 	
+	public Query() {
+		super();
+	}
 	public Query(T query, Background<T> background, Current_Illness<T> current_illness, Diagnosis<T> diagnosis,
 			Forecast<T> forecast, Odontograma<T> odontograma, Patient_Discharge<T> patient_discharge,
 			Physical_Exploration<T> physical_exploration, Treatment_Recomendation<T> treatment_recomendation,

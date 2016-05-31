@@ -16,7 +16,7 @@
 		<div class="container">
 			<br>
 			<div id="contenido1">
-				<form action="" class="form-horizontal">
+				<form action="/search_Dni" method="get" "form-horizontal">
 					<!--disabled para bloquear todo el form-->
 						<div class="form-group has-info">
 							<section class="main row"> 
@@ -28,7 +28,7 @@
 								<div class="col-md-12 col-lg-12">
 									<div class="form-group">
 										<div class="input-group">
-											<input type="text" class="form-control" placeholder="DNI">
+											<input type="text" class="form-control" name="dni" placeholder="DNI">
 											<span class="input-group-btn">
 												<button class="btn btn-primary">Buscar</button>
 											</span>
