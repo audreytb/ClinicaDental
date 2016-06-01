@@ -7,26 +7,28 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import com.google.appengine.api.datastore.Key;
+
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
 public class Background<T> {
 	@PrimaryKey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
-	id;
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) 
+	private Key key;
 	@Persistent private T family_background;
 	@Persistent private T personal_history;
 	@Persistent private Query<T> query;
+	public Background() {
+		super();
+	}
+
 	public Background(T family_background, T personal_history, Query<T> query) {
 		super();
 		this.family_background = family_background;
 		this.personal_history = personal_history;
 		this.query = query;
 	}
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
+	
+	
 	public T getFamily_background() {
 		return family_background;
 	}

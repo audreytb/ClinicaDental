@@ -6,14 +6,17 @@ import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
+
+import com.google.appengine.api.datastore.Key;
+
 import java.util.ArrayList;
 import java.util.List;
-import com.google.appengine.datanucleus.annotations.Unowned;
+
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
 public class Patient <T>{
 	@PrimaryKey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
-	id;
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) 
+	private Key key;
 	@Persistent private T name;
 	@Persistent private T last_name;
 	@Persistent private T number_historia_clinica;
@@ -34,12 +37,16 @@ public class Patient <T>{
 	@Persistent private T current_address;
 	@Persistent private T name_lastName_companion;
 	
-	@Persistent @Unowned private Dentist<T> dentista=new Dentist<T>();
+	@Persistent private Dentist<T> dentista=new Dentist<T>();
 	//private int[] hola=new int[2];
-	//(T[]) new Object[capacidad];
-	//private List<Color> color = new ArrayList<Color>();
-	//@Persistent private Query<T>[] query=(Query<T>[]) new Object[2];
-	@Persistent private List<Query<T>> query= new ArrayList <Query<T>>();
+		//(T[]) new Object[capacidad];
+		//private List<Color> color = new ArrayList<Color>();
+		//@Persistent private Query<T>[] query=(Query<T>[]) new Object[2];
+	
+	@Persistent(mappedBy = "patient")
+	private List<Query<T>> query= new ArrayList <Query<T>>();
+	
+	
 	public Patient(T name, T last_name, T number_historia_clinica, T number_dni, T date_time_care,
 			T opening_date_medical_history, T sex, T age, T birthplace, T birthdate, T degree_instruction, T race,
 			T occupation, T religion, T cvil_status, T place_origin, T current_address, T name_lastName_companion,
@@ -91,12 +98,7 @@ public class Patient <T>{
 		this.dentista = dentista;
 		this.query = query;
 	}
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
+
 	public T getName() {
 		return name;
 	}

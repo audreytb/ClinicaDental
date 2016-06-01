@@ -1,19 +1,22 @@
 package modelClinicaDental;
 
-
+import javax.jdo.annotations.PrimaryKey;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
-
+import com.google.appengine.api.datastore.Key;
+import com.google.appengine.api.datastore.KeyFactory;
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
 public class Query<T> {
 	@PrimaryKey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
-	id;
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) 
+	private Key key;
+    
 	@Persistent private T query;
-	@Persistent private Background<T> background;
+	@Persistent(mappedBy = "query")
+	 private Background<T> background=new Background<T>();
 	@Persistent private Current_Illness<T> current_illness;
 	@Persistent private Diagnosis<T> diagnosis;
 	@Persistent private Forecast<T> forecast;
@@ -22,6 +25,8 @@ public class Query<T> {
 	@Persistent private Physical_Exploration<T> physical_exploration;
 	@Persistent private Treatment_Recomendation<T> treatment_recomendation;
 	@Persistent private Workplan<T> workplan;
+	
+	
 	@Persistent private Patient<T> patient;
 	
 	
@@ -46,16 +51,15 @@ public class Query<T> {
 		this.workplan = workplan;
 		this.patient = patient;
 	}
+	public void setKey(Key key) {
+        this.key = key;
+	}
 	public Query(Patient<T> patient) {
 		super();
 		this.patient = patient;
 	}
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
+	
+	
 	public T getQuery() {
 		return query;
 	}

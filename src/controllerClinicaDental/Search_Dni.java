@@ -17,7 +17,7 @@ public class Search_Dni extends HttpServlet {
 		System.out.println(dni);
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		
-		String query = "select from " + Patient.class.getName() + " where number_dni == '"+dni+"'";
+		String query = "select from " + Patient.class.getName() + " where getNumber_dni() == '"+dni+"'";
 		List<Patient> pacientes = (List<Patient>)pm.newQuery(query).execute();
 		
 		System.out.println(query);
