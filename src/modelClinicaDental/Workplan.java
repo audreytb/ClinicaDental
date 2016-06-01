@@ -12,10 +12,13 @@ public class Workplan {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
-	@Persistent private String work_plan;
-	@Persistent private Query query;
+	@Persistent private String work_plan="";
 	
-	
+	@Persistent(mappedBy = "workplan") private Query query=new Query();
+
+	public Workplan() {
+		super();
+	}	
 	
 	
 	

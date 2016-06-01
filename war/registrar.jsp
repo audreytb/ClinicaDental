@@ -23,91 +23,91 @@
 					<h3>Nuevo Registro de Usuario</h3>
 				</article> 
 				<br>
-				<form action="" class="form-horizontal" >
+				<form action="register_Patient" class="form-horizontal" >
 					<div class="form-group ">
 						<label for="Nombre&Apellidos" class="control-label col-lg-2 col-md-3 col-sm-3 col-xs-12">Nombre y Apellidos Completos:</label>
 						<div class="col-lg-7 col-md-6 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="nombre&apellidos" placeholder="Nombres y Apellidos"><br>
+							<input type="text" class="form-control" id="nombre&apellidos" name="name" placeholder="Nombres y Apellidos"><br>
 						</div>
 						
 						<label for="Numero de Histaria Clinica" class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Numero de Historia Clinica</label>
 						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="numeroHistClin" placeholder="Numero"><br>
+							<input type="text" class="form-control" id="numeroHistClin" name="number_historia_clinica" placeholder="Numero"><br>
 						</div>
 						
 						<label for="Dni" class="control-label col-lg-1 col-md-3 col-sm-3 col-xs-12">Numero de DNI:</label>
 						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="dni"placeholder="DNI"><br>
+							<input type="text" class="form-control" id="dni" name="number_dni" placeholder="DNI"><br>
 						</div>
 						
 						<label for="Fecha&Hora" class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Fecha y Hora de Atención:</label>
 						<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="fecha&hora" placeholder="Fecha y Hora de Atencion"><br>
+							<input type="text" class="form-control" id="fecha&hora" name="date_time_care" placeholder="Fecha y Hora de Atencion"><br>
 						</div>
 						
 						<label for="Fecha&HoraAp" class="control-label col-lg-2 col-md-3 col-sm-3 col-xs-12">Fecha de Apertura de Historia Clinica:</label>
 						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="fecha&horaAp" placeholder="Fecha y Hora de Apertura"><br>
+							<input type="text" class="form-control" id="fecha&horaAp" name="opening_date_medical_history" placeholder="Fecha y Hora de Apertura"><br>
 						</div>
 						
 						<label for="Sexo" class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Sexo:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="sexo" placeholder="Sexo">
+							<input type="text" class="form-control" id="sexo" name=sex placeholder="Sexo">
 						</div>
 						
 						<label for="Edad" class="control-label col-lg-1 col-md-1 col-sm-3 col-xs-12">Edad:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="edad" placeholder="Edad">
+							<input type="text" class="form-control" id="edad" name="age" placeholder="Edad">
 						</div>
 						
 						<label for="Lugar de Nacimiento" class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Lugar de Nacimiento:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="lugNac" placeholder="Lugar de Nacimiento"><br>
+							<input type="text" class="form-control" id="lugNac" name="birthplace" placeholder="Lugar de Nacimiento"><br>
 						</div>
 						
 						<label for="Fecha de Nacimiento" class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Fecha de Nacimiento:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="fechNac" placeholder="Fecha de Nacimiento">
+							<input type="text" class="form-control" id="fechNac" name="birthdate" placeholder="Fecha de Nacimiento">
 						</div>
 						
 						<label for="Grado de Instruccion" class="control-label col-lg-1 col-md-2 col-sm-3 col-xs-12">Grado de Instrucción:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="gradInst" placeholder="Grado de Instruccion">
+							<input type="text" class="form-control" id="gradInst" name="degree_instruction" placeholder="Grado de Instruccion">
 						</div>
 						
 						<label for="Raza" class="control-label col-lg-2 col-md-1 col-sm-3 col-xs-12">Raza:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="raza" placeholder="Raza"><br>
+							<input type="text" class="form-control" id="raza" name="race" placeholder="Raza"><br>
 						</div>
 						
 						<label for="Ocupacion" class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Ocupación:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="ocupacion" placeholder="Ocupacion">
+							<input type="text" class="form-control" id="ocupacion" name="occupation" placeholder="Ocupacion">
 						</div>
 						
 						<label for="Religion" class="control-label col-lg-1 col-md-1 col-sm-3 col-xs-12">Religión:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="religion" placeholder="Religion">
+							<input type="text" class="form-control" id="religion" name="religion" placeholder="Religion">
 						</div>
 						
 						<label for="Estado Civil" class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Estado Civil:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="estadoCivil" placeholder="Estado Civil">
+							<input type="text" class="form-control" id="estadoCivil" name="cvil_status" placeholder="Estado Civil">
 						</div>
 						
 						<label for="Lugar de procedencia" class="control-label col-lg-3 col-md-3 col-sm-3 col-xs-12">Lugar de Procedencia:</label>
 						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-							<input type="text" class="form-control" id="lugProc" placeholder="Lugar de Procedencia"><br>
+							<input type="text" class="form-control" id="lugProc" name="place_origin" placeholder="Lugar de Procedencia"><br>
 						</div>
 						
 						<label for="Domicilio Actual" class="control-label col-lg-3 col-md-3 col-sm-3 col-xs-12">Domicilio Actual:</label>
 						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-							<input type="text" class="form-control" id="domAct" placeholder="Domicilio Actual"><br>
+							<input type="text" class="form-control" id="domAct" name="current_address" placeholder="Domicilio Actual"><br>
 						</div>
 						
 						<label for="Nombre&ApellidosAc" class="control-label col-lg-3 col-md-3 col-sm-3 col-xs-12">Nombre y Apellidos del Acompañante:</label>
 						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-							<input type="text" class="form-control" id="nombre&apellidosAc" placeholder="Nombres y Apellidos del Acompañante">
+							<input type="text" class="form-control" id="nombre&apellidosAc" name="name_lastName_companion" placeholder="Nombres y Apellidos del Acompañante">
 						</div>
 						
 					</div>

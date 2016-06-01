@@ -12,8 +12,16 @@ public class Calendar {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
-	@Persistent private String calendar;
-	@Persistent private Workplan workplan;
+	@Persistent private String calendar="";
+	
+	
+	
+	@Persistent (mappedBy = "calendar") private Workplan workplan=new Workplan();
+	
+	
+	public Calendar() {
+		super();
+	}
 	
 	
 

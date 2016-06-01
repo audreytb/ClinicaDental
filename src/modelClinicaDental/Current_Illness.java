@@ -12,14 +12,19 @@ public class Current_Illness {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
-	@Persistent private String enfermedad_actual;
-	@Persistent private String data_reporting;
-	@Persistent private String reason_consultation;
-	@Persistent private String sick_time;
-	@Persistent private String signs_symptoms_main;
-	@Persistent private String chronological_story;
-	@Persistent private String biological_functions;
-	@Persistent private Query query;
+	@Persistent private String enfermedad_actual="";
+	@Persistent private String data_reporting="";
+	@Persistent private String reason_consultation="";
+	@Persistent private String sick_time="";
+	@Persistent private String signs_symptoms_main="";
+	@Persistent private String chronological_story="";
+	@Persistent private String biological_functions="";
+	
+	@Persistent(mappedBy = "current_illness") private Query query=new Query();
+	
+	public Current_Illness() {
+		super();
+	}
 	
 	
 	

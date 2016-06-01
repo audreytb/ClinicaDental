@@ -12,8 +12,12 @@ public class Forecast {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
-	@Persistent private String fore_cast;
-	@Persistent private Query query;
+	@Persistent private String fore_cast="";
+	@Persistent(mappedBy = "forecast") private Query query=new Query();
+	
+	public Forecast() {
+		super();
+	}
 	
 	
 	

@@ -14,12 +14,13 @@ public class Background {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) 
 	private Key key;
-	@Persistent private String family_background;
-	@Persistent private String personal_history;
+	@Persistent private String family_background="";
+	@Persistent private String personal_history="";
 	
-	@Persistent private Query query;
+	@Persistent private Query query=new Query();
+	
 	public Background() {
-		super();
+		
 	}
 
 	

@@ -5,22 +5,37 @@ import java.util.Date;
 import java.text.DateFormat;
 
 import javax.jdo.PersistenceManager;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import modelClinicaDental.PMF;
 import modelClinicaDental.Patient;
 import java.util.List;
+
 @SuppressWarnings("serial")
 public class Search_Dni extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
-			throws IOException {
-		int dni=Integer.parseInt(req.getParameter("dni"));
+			throws IOException, ServletException {
+		String dni=req.getParameter("dni");
 		System.out.println(dni);
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		
-		String query = "select from " + Patient.class.getName() + " where getNumber_dni() == '"+dni+"'";
+		
+		
+		String query = "select from " + Patient.class.getName() + " where number_dni == '"+dni+"'";
 		List<Patient> pacientes = (List<Patient>)pm.newQuery(query).execute();
 		
-		System.out.println(query);
+		if(pacientes==null)
+			resp.sendRedirect("registrar.jsp");
 		
+		req.setAttribute("pacientes", pacientes);
+		RequestDispatcher dispatcher =getServletContext().getRequestDispatcher("/consultarPaciente.jsp");
+		dispatcher.forward(req, resp);
+	
+		
+		
+		
+		System.out.println(query);
+		System.out.println(pacientes);
 	}
 }
