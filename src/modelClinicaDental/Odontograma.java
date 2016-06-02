@@ -12,8 +12,8 @@ public class Odontograma {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
-	@Persistent private String odontogram="";
-	@Persistent(mappedBy = "odontograma") private Query query=new Query();
+	@Persistent private String odontogram;
+
 	public Odontograma() {
 		super();
 	}

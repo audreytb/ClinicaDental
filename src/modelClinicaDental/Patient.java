@@ -17,37 +17,35 @@ public class Patient {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
-	@Persistent private String name="";
+	@Persistent private String name;
 	
 	@Persistent private int number_historia_clinica;
-	@Persistent private String number_dni="";
+	@Persistent private String number_dni;
 	
-	@Persistent private int date_time_care=0;
-	@Persistent private int opening_date_medical_history=0;
-	@Persistent private String sex="";
-	@Persistent private int age=0;
-	@Persistent private String birthplace="";
-	@Persistent private int birthdate=0;
-	@Persistent private String degree_instruction="";
-	@Persistent private String race="";
-	@Persistent private String occupation="";
-	@Persistent private String religion="";
-	@Persistent private String cvil_status="";
-	@Persistent private String place_origin="";
-	@Persistent private String current_address="";
-	@Persistent private String name_lastName_companion="";
+	@Persistent private int date_time_care;
+	@Persistent private int opening_date_medical_history;
+	@Persistent private String sex;
+	@Persistent private int age;
+	@Persistent private String birthplace;
+	@Persistent private int birthdate;
+	@Persistent private String degree_instruction;
+	@Persistent private String race;
+	@Persistent private String occupation;
+	@Persistent private String religion;
+	@Persistent private String cvil_status;
+	@Persistent private String place_origin;
+	@Persistent private String current_address;
+	@Persistent private String name_lastName_companion;
 	
 	
 	
-	@Persistent(mappedBy = "patient")
-	 private Dentist dentista=new Dentist();
+	
 	//private int[] hola=new int[2];
 		//(T[]) new Object[capacidad];
 		//private List<Color> color = new ArrayList<Color>();
 		//@Persistent private Query<T>[] query=(Query<T>[]) new Object[2];
-	
-	@Persistent(mappedBy = "patient")
-	private List<Query> query= new ArrayList <Query>();
+	@Persistent private Dentist dentista;
+	@Persistent(mappedBy = "patient") private List<Query> query;
 	
 	
 	public Patient() {

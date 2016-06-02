@@ -25,11 +25,11 @@ public class Search_Dni extends HttpServlet {
 		String query = "select from " + Patient.class.getName() + " where number_dni == '"+dni+"'";
 		List<Patient> pacientes = (List<Patient>)pm.newQuery(query).execute();
 		
-		if(pacientes==null)
+		if(pacientes.isEmpty())
 			resp.sendRedirect("registrar.jsp");
 		
 		req.setAttribute("pacientes", pacientes);
-		RequestDispatcher dispatcher =getServletContext().getRequestDispatcher("/consultarPaciente.jsp");
+		RequestDispatcher dispatcher =getServletContext().getRequestDispatcher("/consultaPaciente.jsp");
 		dispatcher.forward(req, resp);
 	
 		

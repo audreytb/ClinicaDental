@@ -15,14 +15,13 @@ public class Dentist {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
-	@Persistent private String name="";
-	@Persistent private String last_name="";
-	@Persistent private String tuition="";
+	@Persistent private String name;
+	@Persistent private String last_name;
+	@Persistent private String tuition;
 	
 	
-	@Persistent(mappedBy = "dentist") private List<Patient> patient= new ArrayList <Patient>();
-	
-	@Persistent(mappedBy = "dentist") private Calendar calendar=new Calendar();
+	@Persistent(mappedBy = "dentista") private List<Patient> patient= new ArrayList <Patient>();
+	@Persistent(mappedBy = "dentista") private Calendar calendar=new Calendar();
 	
 	public Dentist() {
 		super();

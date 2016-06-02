@@ -1,6 +1,9 @@
 package modelClinicaDental;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
@@ -12,11 +15,10 @@ public class Calendar {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
-	@Persistent private String calendar="";
+	@Persistent private String calendar;
 	
-	
-	
-	@Persistent (mappedBy = "calendar") private Workplan workplan=new Workplan();
+	@Persistent private Dentist dentista;
+	@Persistent (mappedBy = "calendar") private List<Workplan> workplan= new ArrayList <Workplan>();
 	
 	
 	public Calendar() {

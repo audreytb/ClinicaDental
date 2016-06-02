@@ -12,9 +12,9 @@ public class Diagnosis {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
-	@Persistent private String presumptive_diagnosis="";
-	@Persistent private String definitive_diagnosis="";
-	@Persistent(mappedBy = "diagnosis") private Patient patient;
+	@Persistent private String presumptive_diagnosis;
+	@Persistent private String definitive_diagnosis;
+
 	
 	public Diagnosis() {
 		super();

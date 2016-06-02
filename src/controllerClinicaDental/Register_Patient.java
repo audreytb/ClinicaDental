@@ -37,11 +37,18 @@ public class Register_Patient extends HttpServlet {
 				req.getParameter("current_address"),
 				req.getParameter("name_lastName_companion")
 				);
+		
+				
+		System.out.println(a);
 		try {
 			pm.makePersistent(a);
+			System.out.println(a);
 		} finally {
 			pm.close();
 		}
+		
+		resp.sendRedirect("viewPatient?action=patientDisplay&patientId="+a.getId());
+		//System.out.println("aqui");
 		//resp.sendRedirect("searh_Dni?dni=deRegistro&accountId="+a.getId());
 		//System.out.println(a);
 		

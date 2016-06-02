@@ -12,8 +12,8 @@ public class Patient_Discharge {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
 	id;
-	@Persistent private String patientDischarge="";
-	@Persistent(mappedBy = "patient_discharge") private Query query=new Query();
+	@Persistent private String patientDischarge;
+
 	public Patient_Discharge() {
 	}
 	
