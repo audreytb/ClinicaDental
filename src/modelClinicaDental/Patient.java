@@ -8,15 +8,19 @@ import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 import com.google.appengine.api.datastore.Key;
+import com.google.appengine.api.datastore.KeyFactory;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import javax.jdo.annotations.Extension;
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
 public class Patient {
+
 	@PrimaryKey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) private Long
-	id;
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+    private Long id;
+    
+    
 	@Persistent private String name;
 	
 	@Persistent private int number_historia_clinica;
@@ -131,13 +135,26 @@ public class Patient {
 		this.query = query;
 	}
 	
+	
+
+	
+
+
+	
+
+
+
 	public Long getId() {
 		return id;
 	}
 
+
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
+
 
 	public String getName() {
 		return name;
@@ -267,6 +284,25 @@ public class Patient {
 				+ current_address + ", name_lastName_companion=" + name_lastName_companion + ", dentista=" + dentista
 				+ ", query=" + query + "]";
 	}
+
+
+
+	
+
+
+
+	
+
+
+
+
+
+
+	
+
+
+
+
 	
 
 	

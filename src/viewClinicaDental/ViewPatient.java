@@ -9,7 +9,7 @@ import javax.jdo.PersistenceManager;
 import modelClinicaDental.PMF;
 import modelClinicaDental.Query;
 import java.util.List;
-
+import com.google.appengine.api.datastore.KeyFactory;
 @SuppressWarnings("serial")
 public class ViewPatient extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse
@@ -20,7 +20,7 @@ public class ViewPatient extends HttpServlet {
 		Patient a = pm.getObjectById(Patient.class, k);
 		
 		String query = "select from " + 
-				Query.class.getName() + " where patientId =="
+				Query.class.getName() + " where queryId =="
 				+request.getParameter("patientId");
 				
 		List<Query> consultas = (List<Query>)pm.newQuery(query).execute();

@@ -5,6 +5,8 @@ import java.util.Date;
 
 import javax.servlet.http.*;
 
+import modelClinicaDental.Query;
+
 
 @SuppressWarnings("serial")
 public class Login extends HttpServlet {
@@ -19,6 +21,7 @@ public class Login extends HttpServlet {
 			HttpSession misesion= req.getSession(true);
 			misesion.setAttribute("nombre","Juan Perez");
 			misesion.setAttribute("correo","jperez@gmail.com");
+			
 			
 			resp.sendRedirect("consultaPaciente.jsp");
 		}

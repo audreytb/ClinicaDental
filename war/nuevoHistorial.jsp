@@ -43,7 +43,7 @@
 							<div role="tabpanel"class="tab-pane active"id="seccion1">
 								<div class=container-fluid>
 									<h3>Enfermedad Actual</h3>
-									<form action="nuevaConsulta" class="form-horizontal" >
+									<form action="newCurrent_Illness" class="form-horizontal" >
 										<div class="form-group container-fluid">
 											<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px"></textarea>
 										</div>
@@ -51,6 +51,7 @@
 										<div class="form-group ">
 											<label for="nombre" class="control-label col-md-2 col-lg-2">Datos del Informante:</label>
 											<div class="col-md-10 col-lg-10">
+												
 												<input type="text" class="form-control" id="nombre" name="data_reporting" placeholder="Nombre">
 											</div>
 										</div>	

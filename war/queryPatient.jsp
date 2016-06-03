@@ -48,7 +48,7 @@
 									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 										<a href="#" title="Ver Anterior Historial"  class="col-xs-3 col-sm-3 col-md-3 col-lg-3 btn btn-info"><span class="hidden-xs">Ver anteriores Historiales</span></a>
 										<a href="#" title="Elminar Historial" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 btn btn-danger"><span class="hidden-xs">Eliminar</span></a>
-										<a href="nuevoHistorial.jsp" title="Nuevo Historial"  class="col-xs-3 col-sm-3 col-md-3 col-lg-3 btn btn-success"><span class="hidden-xs">Ingresar Nuevo Historial</span></a>
+										<a href="nuevaConsulta" title="Nuevo Historial"  class="col-xs-3 col-sm-3 col-md-3 col-lg-3 btn btn-success"><span class="hidden-xs">Ingresar Nuevo Historial</span></a>
 									</div>
 								</div>
 							</section>

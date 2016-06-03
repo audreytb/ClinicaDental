@@ -9,11 +9,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @SuppressWarnings("serial")
 public class Register_Patient extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException, ServletException {
+		
+		HttpSession misesion= req.getSession();
+		
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		
 		Patient a = new Patient(
@@ -46,10 +50,11 @@ public class Register_Patient extends HttpServlet {
 		} finally {
 			pm.close();
 		}
-		
+		misesion.setAttribute("dentistId",a.getId());
 		resp.sendRedirect("viewPatient?action=patientDisplay&patientId="+a.getId());
 		//System.out.println("aqui");
 		//resp.sendRedirect("searh_Dni?dni=deRegistro&accountId="+a.getId());
+		//System.out.println(a.getId());
 		//System.out.println(a);
 		
 	}
