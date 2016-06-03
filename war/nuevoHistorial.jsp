@@ -51,14 +51,14 @@
 										<div class="form-group ">
 											<label for="nombre" class="control-label col-md-2 col-lg-2">Datos del Informante:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="nombre" name="data_reporting" placeholder="Nombre">
+												<input type="text" class="form-control" id="nombre" name="data_reporting" value="Alvarez Mamani Richard">
 											</div>
 										</div>	
 								
 										<div class="form-group ">
 											<label for="motConsulta" class="control-label col-md-2 col-lg-2">Motivos de Consulta:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="motivos" name="reason_consultation" placeholder="Consulta">
+												<input type="text" class="form-control" id="motivos" name="reason_consultation" value="Dolencias Musculares">
 												
 											</div>
 										</div>
@@ -66,7 +66,7 @@
 										<div class="form-group ">
 											<label for="Enfermedad" class="control-label col-md-2 col-lg-2">Tipo de Enfermedad:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="enfermedad" name="sick_time" placeholder="Enfermedad">
+												<input type="text" class="form-control" id="enfermedad" name="sick_time" value="osea Muscular">
 												
 											</div>
 										</div>
@@ -74,7 +74,7 @@
 										<div class="form-group ">
 											<label for="Sig/sin" class="control-label col-md-2 col-lg-2">Signos y Sintomas Principales:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="sig/sin" name="signs_symptoms_main" placeholder="Signos y Sintomas">
+												<input type="text" class="form-control" id="sig/sin" name="signs_symptoms_main" value="Fuertes dolores punsantes en las rodillas">
 												
 											</div>
 										</div>
@@ -82,7 +82,7 @@
 										<div class="form-group ">
 											<label for="Relato" class="control-label col-md-2 col-lg-2">Relato Cronologico:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="relato" name="chronological_story" placeholder="Relato">
+												<input type="text" class="form-control" id="relato" name="chronological_story" value="Relato">
 												
 											</div>
 										</div>
@@ -90,7 +90,7 @@
 										<div class="form-group ">
 											<label for="FuncionesBio" class="control-label col-md-2 col-lg-2">Funciones Biologicas:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="funciones" name="biological_functions" placeholder="Funciones Biologicas">
+												<input type="text" class="form-control" id="funciones" name="biological_functions" value="Funciones Biologicas">
 												
 											</div>
 										</div>
