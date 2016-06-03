@@ -27,87 +27,87 @@
 					<div class="form-group ">
 						<label for="Nombre&Apellidos" class="control-label col-lg-2 col-md-3 col-sm-3 col-xs-12">Nombre y Apellidos Completos:</label>
 						<div class="col-lg-7 col-md-6 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="nombre&apellidos" name="name" placeholder="Nombres y Apellidos"><br>
+							<input type="text" class="form-control" id="nombre&apellidos" name="name" value="Alvarez Mamani Richard"><br>
 						</div>
 						
 						<label for="Numero de Histaria Clinica" class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Numero de Historia Clinica</label>
 						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="numeroHistClin" name="number_historia_clinica" placeholder="Numero"><br>
+							<input type="text" class="form-control" id="numeroHistClin" name="number_historia_clinica" value="123"><br>
 						</div>
 						
 						<label for="Dni" class="control-label col-lg-1 col-md-3 col-sm-3 col-xs-12">Numero de DNI:</label>
 						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="dni" name="number_dni" placeholder="DNI"><br>
+							<input type="text" class="form-control" id="dni" name="number_dni" value="73252623"><br>
 						</div>
 						
 						<label for="Fecha&Hora" class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Fecha y Hora de Atención:</label>
 						<div class="col-lg-4 col-md-3 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="fecha&hora" name="date_time_care" placeholder="Fecha y Hora de Atencion"><br>
+							<input type="text" class="form-control" id="fecha&hora" name="date_time_care" value="03/06/2016-11:34"><br>
 						</div>
 						
 						<label for="Fecha&HoraAp" class="control-label col-lg-2 col-md-3 col-sm-3 col-xs-12">Fecha de Apertura de Historia Clinica:</label>
 						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="fecha&horaAp" name="opening_date_medical_history" placeholder="Fecha y Hora de Apertura"><br>
+							<input type="text" class="form-control" id="fecha&horaAp" name="opening_date_medical_history" value="01/03/2013"><br>
 						</div>
 						
 						<label for="Sexo" class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Sexo:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="sexo" name=sex placeholder="Sexo">
+							<input type="text" class="form-control" id="sexo" name=sex value="Masculino">
 						</div>
 						
 						<label for="Edad" class="control-label col-lg-1 col-md-1 col-sm-3 col-xs-12">Edad:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="edad" name="age" placeholder="Edad">
+							<input type="text" class="form-control" id="edad" name="age" value="26">
 						</div>
 						
 						<label for="Lugar de Nacimiento" class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Lugar de Nacimiento:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="lugNac" name="birthplace" placeholder="Lugar de Nacimiento"><br>
+							<input type="text" class="form-control" id="lugNac" name="birthplace" value="Arequipa"><br>
 						</div>
 						
 						<label for="Fecha de Nacimiento" class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Fecha de Nacimiento:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="fechNac" name="birthdate" placeholder="Fecha de Nacimiento">
+							<input type="text" class="form-control" id="fechNac" name="birthdate" value="10/04/1989">
 						</div>
 						
 						<label for="Grado de Instruccion" class="control-label col-lg-1 col-md-2 col-sm-3 col-xs-12">Grado de Instrucción:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="gradInst" name="degree_instruction" placeholder="Grado de Instruccion">
+							<input type="text" class="form-control" id="gradInst" name="degree_instruction" value="Universitaria">
 						</div>
 						
 						<label for="Raza" class="control-label col-lg-2 col-md-1 col-sm-3 col-xs-12">Raza:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="raza" name="race" placeholder="Raza"><br>
+							<input type="text" class="form-control" id="raza" name="race" value="Mestizo"><br>
 						</div>
 						
 						<label for="Ocupacion" class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Ocupación:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="ocupacion" name="occupation" placeholder="Ocupacion">
+							<input type="text" class="form-control" id="ocupacion" name="occupation" value="Estudiante">
 						</div>
 						
 						<label for="Religion" class="control-label col-lg-1 col-md-1 col-sm-3 col-xs-12">Religión:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="religion" name="religion" placeholder="Religion">
+							<input type="text" class="form-control" id="religion" name="religion" value="Catolico">
 						</div>
 						
 						<label for="Estado Civil" class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Estado Civil:</label>
 						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="estadoCivil" name="cvil_status" placeholder="Estado Civil">
+							<input type="text" class="form-control" id="estadoCivil" name="cvil_status" value="Soltero">
 						</div>
 						
 						<label for="Lugar de procedencia" class="control-label col-lg-3 col-md-3 col-sm-3 col-xs-12">Lugar de Procedencia:</label>
 						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-							<input type="text" class="form-control" id="lugProc" name="place_origin" placeholder="Lugar de Procedencia"><br>
+							<input type="text" class="form-control" id="lugProc" name="place_origin" value="Arequipa"><br>
 						</div>
 						
 						<label for="Domicilio Actual" class="control-label col-lg-3 col-md-3 col-sm-3 col-xs-12">Domicilio Actual:</label>
 						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-							<input type="text" class="form-control" id="domAct" name="current_address" placeholder="Domicilio Actual"><br>
+							<input type="text" class="form-control" id="domAct" name="current_address" value="1ero de Abril Paucarpata"><br>
 						</div>
 						
 						<label for="Nombre&ApellidosAc" class="control-label col-lg-3 col-md-3 col-sm-3 col-xs-12">Nombre y Apellidos del Acompañante:</label>
 						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-							<input type="text" class="form-control" id="nombre&apellidosAc" name="name_lastName_companion" placeholder="Nombres y Apellidos del Acompañante">
+							<input type="text" class="form-control" id="nombre&apellidosAc" name="name_lastName_companion" value="Audrey Tacca Barrantes">
 						</div>
 						
 					</div>

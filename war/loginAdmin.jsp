@@ -10,8 +10,12 @@
 	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <link rel="stylesheet" href="css/bootstrap.min.css ">
 <link rel="stylesheet" href="css/estilo.css ">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
 </head>
+
 <body>
+	
 	<jsp:include page="menu.jsp" flush="true" />
 	<br>
 	<div class="container">
@@ -26,17 +30,18 @@
 						<div class="form-group">
 							<label for="nombre" class="control-label col-lg-2 col-md-2 col-sm-2">Usuario:</label>
 							<div class=" col-lg-6 col-md-8 col-sm-8">
-								<input type="text" name="nombre" class="form-control" id="usuario" placeholder="Usuario"><br>
+								<input type="text" name="nombre" class="form-control" id="usuario" value="Dr. Flores"><br>
 							</div>
+							
 							
 							<label for="nombre" class="control-label col-lg-2 col-md-2 col-sm-2">Password:</label>
 							<div class=" col-lg-6 col-md-8 col-sm-8">
-								<input type="text" name="clave" class="form-control " id=password" placeholder="Password"><br>
+								<input type="password" name="clave" class="form-control " id=password" value="Dr. Flores"><br>
 							</div>
 							
 							<label for="boton" class="control-label col-lg-2 col-md-2 col-sm-2"></label>
 							<div class="col-lg-6 col-md-8 col-sm-8">
-								<button type="submit" class="btn btn-info">Iniciar sesion</button>
+								<button id="boton" type="submit" class="btn btn-info">Iniciar sesion</button>
 							</div>
 							
 						</div>
@@ -49,5 +54,6 @@
 
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	
 </body>
 </html>
