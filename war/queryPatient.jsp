@@ -85,30 +85,24 @@
 					    </div>
 					    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 					      <div class="panel-body">
-					        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					      	<table border="0" cellspacing="1" cellpadding="5" bgcolor="#CCCCCC">
-								<tr bgcolor="#407BA8">
-									<td style="color: #ffffff; font-weight: bold;">Name</td>
-									<td bgcolor="#ffffff"><%=patient.getName()%></td>
-								</tr>
-								<tr bgcolor="#407BA8">
-									<td style="color: #ffffff; font-weight: bold;">City</td>
-									<td bgcolor="#ffffff"><%=patient.getNumber_historia_clinica()%></td>
-								</tr>
-								<tr bgcolor="#407BA8">
-									<td style="color: #ffffff; font-weight: bold;">State</td>
-									<td bgcolor="#ffffff"><%=patient.getNumber_dni()%></td>
-								</tr>
-								<tr bgcolor="#407BA8">
-									<td style="color: #ffffff; font-weight: bold;">Phone</td>
-									<td bgcolor="#ffffff"><%=patient.getSex()%></td>
-								</tr>
-								<tr bgcolor="#407BA8">
-									<td style="color: #ffffff; font-weight: bold;">Website</td>
-									<td bgcolor="#ffffff"><%=patient.getReligion()%></td>
-								</tr>
-							</table>
+					      	<article class=" col-lg-5 col-md-5 col-sm-5 col-xs-10 "> 
+								<img id="imgSearch" src="images/family.png" class="img-responsive" alt="DoctorLogin">
+							</article>
 					      
+					      	<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+					      		<ul class="list-group">
+									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
+									<li class="list-group-item"><%=patient.getName()%></li>
+									<li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-plus-sign "></span> Numero de Historia Clinica: </li>
+									<li class="list-group-item"><%=patient.getNumber_historia_clinica()%></li>
+									<li class="list-group-item list-group-item-info"><span class="glyphicon glyphicon-list-alt "></span> Numero de DNI: </li>
+									<li class="list-group-item"><%=patient.getNumber_dni()%></li>
+									<li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-eye-open "></span> Sexo: </li>
+									<li class="list-group-item"><%=patient.getSex()%></li>
+									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
+									<li class="list-group-item"><%=patient.getReligion()%></li>
+								</ul>
+					      	</div>
 					      </div>
 					    </div>
 					  </div>
