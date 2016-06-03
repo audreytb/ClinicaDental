@@ -32,6 +32,11 @@ public class Query {
 	public Query() {
 		
 	}
+
+	public Query(Current_Illness current_illness) {
+		super();
+		this.current_illness = current_illness;
+	}
 	
 
 }

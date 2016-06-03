@@ -43,7 +43,7 @@
 							<div role="tabpanel"class="tab-pane active"id="seccion1">
 								<div class=container-fluid>
 									<h3>Enfermedad Actual</h3>
-									<form action="" class="form-horizontal" >
+									<form action="nuevaConsulta" class="form-horizontal" >
 										<div class="form-group container-fluid">
 											<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px"></textarea>
 										</div>
@@ -51,14 +51,14 @@
 										<div class="form-group ">
 											<label for="nombre" class="control-label col-md-2 col-lg-2">Datos del Informante:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="nombre"placeholder="Nombre">
+												<input type="text" class="form-control" id="nombre" name="data_reporting" placeholder="Nombre">
 											</div>
 										</div>	
 								
 										<div class="form-group ">
 											<label for="motConsulta" class="control-label col-md-2 col-lg-2">Motivos de Consulta:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="motivos" placeholder="Consulta">
+												<input type="text" class="form-control" id="motivos" name="reason_consultation" placeholder="Consulta">
 												
 											</div>
 										</div>
@@ -66,7 +66,7 @@
 										<div class="form-group ">
 											<label for="Enfermedad" class="control-label col-md-2 col-lg-2">Tipo de Enfermedad:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="enfermedad" placeholder="Enfermedad">
+												<input type="text" class="form-control" id="enfermedad" name="sick_time" placeholder="Enfermedad">
 												
 											</div>
 										</div>
@@ -74,7 +74,7 @@
 										<div class="form-group ">
 											<label for="Sig/sin" class="control-label col-md-2 col-lg-2">Signos y Sintomas Principales:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="sig/sin" placeholder="Signos y Sintomas">
+												<input type="text" class="form-control" id="sig/sin" name="signs_symptoms_main" placeholder="Signos y Sintomas">
 												
 											</div>
 										</div>
@@ -82,7 +82,7 @@
 										<div class="form-group ">
 											<label for="Relato" class="control-label col-md-2 col-lg-2">Relato Cronologico:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="relato" placeholder="Relato">
+												<input type="text" class="form-control" id="relato" name="chronological_story" placeholder="Relato">
 												
 											</div>
 										</div>
@@ -90,7 +90,7 @@
 										<div class="form-group ">
 											<label for="FuncionesBio" class="control-label col-md-2 col-lg-2">Funciones Biologicas:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="funciones" placeholder="Funciones Biologicas">
+												<input type="text" class="form-control" id="funciones" name="biological_functions" placeholder="Funciones Biologicas">
 												
 											</div>
 										</div>
@@ -98,8 +98,8 @@
 										
 										<div class="form-group" >
 											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-												<button id="boton1" class="btn btn-success">Guardar</button>
-												<button id="boton2" class="btn btn-danger">Salir</button>
+												<button  name="action" value="data" id="boton1" class="btn btn-success">Guardar</button>
+												<button  id="boton2" class="btn btn-danger">Salir</button>
 											</div>
 										</div>
 										
