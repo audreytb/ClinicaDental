@@ -1,6 +1,9 @@
 package modelClinicaDental;
 
 import javax.jdo.annotations.PrimaryKey;
+
+import java.io.Serializable;
+
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
@@ -9,7 +12,7 @@ import javax.jdo.annotations.Persistent;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
-public class Query {
+public class Query{
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) 
 	private Key key;
@@ -22,7 +25,7 @@ public class Query {
 	@Persistent private Forecast forecast;
 	@Persistent private Odontograma odontograma;
 	@Persistent private Patient_Discharge patient_discharge;
-	@Persistent private Physical_Exploration physical_exploration;
+	@Persistent private PhysicalExploration physical_exploration;
 	@Persistent private Treatment_Recomendation treatment_recomendation;
 	@Persistent private Workplan workplan;
 	
@@ -102,11 +105,11 @@ public class Query {
 		this.patient_discharge = patient_discharge;
 	}
 
-	public Physical_Exploration getPhysical_exploration() {
+	public PhysicalExploration getPhysical_exploration() {
 		return physical_exploration;
 	}
 
-	public void setPhysical_exploration(Physical_Exploration physical_exploration) {
+	public void setPhysical_exploration(PhysicalExploration physical_exploration) {
 		this.physical_exploration = physical_exploration;
 	}
 
@@ -150,6 +153,8 @@ public class Query {
 				+ physical_exploration + ", treatment_recomendation=" + treatment_recomendation + ", workplan="
 				+ workplan + ", patient=" + patient + ", queryId=" + queryId + "]";
 	}
+
+	
 	
 
 }

@@ -3,8 +3,11 @@
 <%@ page import="modelClinicaDental.Patient"%>
 <%@ page import="modelClinicaDental.Query"%>
 <%@ page import="java.util.List"%>
+
 <%
+	
 	Patient patient = (Patient) request.getAttribute("patient");
+	
 	List<Query> consultas = (List<Query>) request.getAttribute("consultas");
 	//SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
 %>

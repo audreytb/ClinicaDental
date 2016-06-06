@@ -14,6 +14,7 @@ import com.google.appengine.api.datastore.KeyFactory;
 public class ViewPatient extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse
 			response) throws ServletException, IOException {
+		//HttpSession misesion= request.getSession();
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		
 		Key k = KeyFactory.createKey(Patient.class.getSimpleName(), new Long(request.getParameter("patientId")));
@@ -26,6 +27,8 @@ public class ViewPatient extends HttpServlet {
 		List<Query> consultas = (List<Query>)pm.newQuery(query).execute();
 		request.setAttribute("patient", a);
 		request.setAttribute("consultas", consultas);
+		
+		pm.close();//agregado
 		RequestDispatcher dispatcher =getServletContext().getRequestDispatcher("/queryPatient.jsp");
 		dispatcher.forward(request, response);
 		

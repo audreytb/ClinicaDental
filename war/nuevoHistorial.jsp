@@ -51,12 +51,9 @@
 										<div class="form-group ">
 											<label for="nombre" class="control-label col-md-2 col-lg-2">Datos del Informante:</label>
 											<div class="col-md-10 col-lg-10">
-<<<<<<< HEAD
-												
-												<input type="text" class="form-control" id="nombre" name="data_reporting" placeholder="Nombre">
-=======
+
 												<input type="text" class="form-control" id="nombre" name="data_reporting" value="Alvarez Mamani Richard">
->>>>>>> cc308720eeea80404759a6514dceba7e19e4546d
+
 											</div>
 										</div>	
 								
@@ -104,7 +101,7 @@
 										<div class="form-group" >
 											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 												<button  name="action" value="data" id="boton1" class="btn btn-success">Guardar</button>
-												<button  id="boton2" class="btn btn-danger">Salir</button>
+												<button  id="boton2" name="action" value="salir" class="btn btn-danger">Salir</button>
 											</div>
 										</div>
 										
@@ -117,7 +114,7 @@
 								<div class="container-fluid">
 									<h3>Antecedentes</h3>
 									<div class="container-fluid">
-										<form action="" class="form-horizontal" >					
+										<form action="newBackground" class="form-horizontal" >					
 											<div class="form-group ">
 												<label for="antecedentesFam" class="control-label col-md-2 col-lg-3">Antecedentes Familiares:</label>
 												<div class="col-md-10 col-lg-12">
@@ -134,8 +131,8 @@
 											
 											<div class="form-group" >
 												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-													<button id="boton1" class="btn btn-success">Guardar</button>
-													<button id="boton2" class="btn btn-danger">Salir</button>
+													<button  name="action" value="data" id="boton1" class="btn btn-success">Guardar</button>
+													<button  id="boton2" name="action" value="salir" class="btn btn-danger">Salir</button>
 												</div>
 											</div>
 											
@@ -148,7 +145,7 @@
 							<div role="tabpanel"class="tab-pane"id="seccion3">
 								<div class="container-fluid">
 									<h3>Exploracion Fisica</h3>
-									<form action="" class="form-horizontal" >
+									<form action="newPhysicalExploration" class="form-horizontal" >
 										<div class="form-group ">
 											<label for="P.A." class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Signos Vitales P.A.</label>
 											<div class="col-lg-1 col-md-2 col-sm-3 col-xs-12">
@@ -186,8 +183,8 @@
 										</div>
 										<div class="form-group" >
 											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-												<button id="boton1" class="btn btn-success">Guardar</button>
-												<button id="boton2" class="btn btn-danger">Salir</button>
+												<button  name="action" value="data" id="boton1" class="btn btn-success">Guardar</button>
+												<button  id="boton2" name="action" value="salir" class="btn btn-danger">Salir</button>
 											</div>
 										</div>
 									</form>
@@ -198,7 +195,7 @@
 							<div role="tabpanel"class="tab-pane"id="seccion4">
 								<div class="container-fluid">
 									<h3>Diagnostico (CIE 10)</h3>
-									<form action="" class="form-horizontal" >
+									<form action="newDiagnosis" class="form-horizontal" >
 										<div class="form-group ">
 											<label for="diagPres" class="control-label col-lg-2 col-md-6 col-sm-3 col-xs-12">Diagnostico Presuntivo:</label>
 											<div div class="col-md-10 col-lg-10">
@@ -215,8 +212,8 @@
 										
 										<div class="form-group" >
 											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-												<button id="boton1" class="btn btn-success">Guardar</button>
-												<button id="boton2" class="btn btn-danger">Salir</button>
+												<button  name="action" value="data" id="boton1" class="btn btn-success">Guardar</button>
+												<button  id="boton2" name="action" value="salir" class="btn btn-danger">Salir</button>
 											</div>
 										</div>
 										
@@ -227,7 +224,7 @@
 							<div role="tabpanel"class="tab-pane"id="seccion5">
 								<div class="container-fluid">
 									<h3>Plan de Trabajo</h3>
-									<form action="" class="form-horizontal" >
+									<form action="newWorkplan" class="form-horizontal" >
 										<div class="form-group ">
 											<div div class="col-md-10 col-lg-12">
 												<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px"></textarea>
@@ -236,8 +233,8 @@
 										
 										<div class="form-group" >
 											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-												<button id="boton1" class="btn btn-success">Guardar</button>
-												<button id="boton2" class="btn btn-danger">Salir</button>
+												<button  name="action" value="data" id="boton1" class="btn btn-success">Guardar</button>
+												<button  id="boton2" name="action" value="salir" class="btn btn-danger">Salir</button>
 											</div>
 										</div>
 										
@@ -248,7 +245,7 @@
 							<div role="tabpanel"class="tab-pane"id="seccion6">
 								<div class="container-fluid">
 									<h3>Pronóstico</h3>
-									<form action="" class="form-horizontal" >
+									<form action="newForecast" class="form-horizontal" >
 										<div class="form-group ">
 											<div div class="col-md-10 col-lg-12">
 												<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px"></textarea>
@@ -257,8 +254,8 @@
 										
 										<div class="form-group" >
 											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-												<button id="boton1" class="btn btn-success">Guardar</button>
-												<button id="boton2" class="btn btn-danger">Salir</button>
+												<button  name="action" value="data" id="boton1" class="btn btn-success">Guardar</button>
+												<button  id="boton2" name="action" value="salir" class="btn btn-danger">Salir</button>
 											</div>
 										</div>
 										
@@ -270,7 +267,7 @@
 							<div role="tabpanel"class="tab-pane"id="seccion7">
 								<div class=container-fluid>
 									<h3>Tratamiento/ Recomendaciones</h3>
-									<form action="" class="form-horizontal" >
+									<form action="newTreatment_Recomendation" class="form-horizontal" >
 										<div class="form-group container-fluid">
 											<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px"></textarea>
 										</div>
@@ -340,8 +337,8 @@
 										
 										<div class="form-group" >
 											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-												<button id="boton1" class="btn btn-success">Guardar</button>
-												<button id="boton2" class="btn btn-danger">Salir</button>
+												<button  name="action" value="data" id="boton1" class="btn btn-success">Guardar</button>
+												<button  id="boton2" name="action" value="salir" class="btn btn-danger">Salir</button>
 											</div>
 										</div>
 										
@@ -353,7 +350,7 @@
 							<div role="tabpanel"class="tab-pane"id="seccion8">
 								<div class="container-fluid">
 									<h3>Odontograma</h3>
-									<form action="" class="form-horizontal" >
+									<form action="newOdontograma" class="form-horizontal" >
 										<div class="form-group ">
 											<div div class="col-md-10 col-lg-12">
 												<img alt="odontograma" class="img-responsive" src="images/odonto.jpg">
@@ -378,8 +375,8 @@
 											
 										<div class="form-group" >
 											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-												<button id="boton1" class="btn btn-success">Guardar</button>
-												<button id="boton2" class="btn btn-danger">Salir</button>
+												<button  name="action" value="data" id="boton1" class="btn btn-success">Guardar</button>
+												<button  id="boton2" name="action" value="salir" class="btn btn-danger">Salir</button>
 											</div>
 										</div>
 										

@@ -25,20 +25,22 @@ public class NuevaConsulta extends HttpServlet {
 		
 		resp.setContentType("text/plain");
 		
-		if(misesion.getAttribute("query")==null){
-			//Query query=new Query();
-			try {
-				pm.makePersistent(query);
-			} finally {
-				pm.close();
-				
-				misesion.setAttribute("queryKey",query.getKey());
-				System.out.println((Query)misesion.getAttribute("query") + "imprimiendo la consulta");
-				System.out.println(query.getKey());
-				System.out.println(query);
-				resp.sendRedirect("nuevoHistorial.jsp");
-			}
+	
+		try {
+			pm.makePersistent(query);
+			
+		} finally {
+			pm.close();
+			String queryKey=query.getKey();
+			misesion.setAttribute("queryKey",queryKey);
+			System.out.println(misesion.getAttribute("queryKey") + "imprimiendo la consulta");
+			System.out.println(query.getKey());
+			System.out.println(queryKey);
+			System.out.println(query);
+			
+			
 		}
 		
+		resp.sendRedirect("nuevoHistorial.jsp");
 	}
 }

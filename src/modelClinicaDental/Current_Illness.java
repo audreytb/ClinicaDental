@@ -8,6 +8,7 @@ import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 import com.google.appengine.api.datastore.Key;
+import com.google.appengine.api.datastore.KeyFactory;
 
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
 public class Current_Illness {
@@ -62,6 +63,96 @@ public class Current_Illness {
 				+ data_reporting + ", reason_consultation=" + reason_consultation + ", sick_time=" + sick_time
 				+ ", signs_symptoms_main=" + signs_symptoms_main + ", chronological_story=" + chronological_story
 				+ ", biological_functions=" + biological_functions + ", current_illnesId=" + current_illnesId + "]";
+	}
+
+
+	public String getKey() {
+		return KeyFactory.keyToString(this.key);
+	}
+
+
+	public void setKey(Key key) {
+		this.key = key;
+	}
+
+
+	public String getEnfermedad_actual() {
+		return enfermedad_actual;
+	}
+
+
+	public void setEnfermedad_actual(String enfermedad_actual) {
+		this.enfermedad_actual = enfermedad_actual;
+	}
+
+
+	public String getData_reporting() {
+		return data_reporting;
+	}
+
+
+	public void setData_reporting(String data_reporting) {
+		this.data_reporting = data_reporting;
+	}
+
+
+	public String getReason_consultation() {
+		return reason_consultation;
+	}
+
+
+	public void setReason_consultation(String reason_consultation) {
+		this.reason_consultation = reason_consultation;
+	}
+
+
+	public String getSick_time() {
+		return sick_time;
+	}
+
+
+	public void setSick_time(String sick_time) {
+		this.sick_time = sick_time;
+	}
+
+
+	public String getSigns_symptoms_main() {
+		return signs_symptoms_main;
+	}
+
+
+	public void setSigns_symptoms_main(String signs_symptoms_main) {
+		this.signs_symptoms_main = signs_symptoms_main;
+	}
+
+
+	public String getChronological_story() {
+		return chronological_story;
+	}
+
+
+	public void setChronological_story(String chronological_story) {
+		this.chronological_story = chronological_story;
+	}
+
+
+	public String getBiological_functions() {
+		return biological_functions;
+	}
+
+
+	public void setBiological_functions(String biological_functions) {
+		this.biological_functions = biological_functions;
+	}
+
+
+	public String getCurrent_illnesId() {
+		return current_illnesId;
+	}
+
+
+	public void setCurrent_illnesId(String current_illnesId) {
+		this.current_illnesId = current_illnesId;
 	}
 
 

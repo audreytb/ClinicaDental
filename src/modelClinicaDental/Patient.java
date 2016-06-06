@@ -10,11 +10,12 @@ import javax.jdo.annotations.PrimaryKey;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.jdo.annotations.Extension;
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
-public class Patient {
+public class Patient{
 
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)

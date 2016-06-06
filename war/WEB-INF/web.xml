@@ -4,6 +4,18 @@ xmlns="http://java.sun.com/xml/ns/javaee"
 xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	
+	
+	<servlet>
+		<servlet-name>GuardarConsulta</servlet-name>
+		<servlet-class>controllerClinicaDental.GuardarConsulta</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GuardarConsulta</servlet-name>
+		<url-pattern>/guardarConsulta</url-pattern>
+	</servlet-mapping>
+	
+	
 	<servlet>
 		<servlet-name>Login</servlet-name>
 		<servlet-class>controllerClinicaDental.Login</servlet-class>
@@ -12,42 +24,93 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>Login</servlet-name>
 		<url-pattern>/login</url-pattern>
 	</servlet-mapping>
-	<servlet>
-		<servlet-name>ClinicaDentalServlet</servlet-name>
-		<servlet-class>controllerClinicaDental.ClinicaDentalServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ClinicaDentalServlet</servlet-name>
-		<url-pattern>/clinicaDentalServlet</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>Search_Dni</servlet-name>
-		<servlet-class>controllerClinicaDental.Search_Dni</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Search_Dni</servlet-name>
-		<url-pattern>/search_Dni</url-pattern>
-	</servlet-mapping>
 	
 	
 	<servlet>
-		<servlet-name>Register_Patient</servlet-name>
-		<servlet-class>controllerClinicaDental.Register_Patient</servlet-class>
+		<servlet-name>NewBackground</servlet-name>
+		<servlet-class>controllerClinicaDental.NewBackground</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Register_Patient</servlet-name>
-		<url-pattern>/register_Patient</url-pattern>
+		<servlet-name>NewBackground</servlet-name>
+		<url-pattern>/newBackground</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>NewCurrent_Illness</servlet-name>
+		<servlet-class>controllerClinicaDental.NewCurrent_Illness</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewCurrent_Illness</servlet-name>
+		<url-pattern>/newCurrent_Illness</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>ViewPatient</servlet-name>
-		<servlet-class>viewClinicaDental.ViewPatient</servlet-class>
+		<servlet-name>NewDiagnosis</servlet-name>
+		<servlet-class>controllerClinicaDental.NewDiagnosis</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>ViewPatient</servlet-name>
-		<url-pattern>/viewPatient</url-pattern>
+		<servlet-name>NewDiagnosis</servlet-name>
+		<url-pattern>/newDiagnosis</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>NewForecast</servlet-name>
+		<servlet-class>controllerClinicaDental.NewForecast</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewForecast</servlet-name>
+		<url-pattern>/newForecast</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>NewOdontograma</servlet-name>
+		<servlet-class>controllerClinicaDental.NewOdontograma</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewOdontograma</servlet-name>
+		<url-pattern>/newOdontograma</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>NewPatient_Discharge</servlet-name>
+		<servlet-class>controllerClinicaDental.NewPatient_Discharge</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewPatient_Discharge</servlet-name>
+		<url-pattern>/newPatient_Discharge</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>NewPhysicalExploration</servlet-name>
+		<servlet-class>controllerClinicaDental.NewPhysicalExploration</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewPhysicalExploration</servlet-name>
+		<url-pattern>/newPhysicalExploration</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>NewTreatment_Recomendation</servlet-name>
+		<servlet-class>controllerClinicaDental.NewTreatment_Recomendation</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewTreatment_Recomendation</servlet-name>
+		<url-pattern>/newTreatment_Recomendation</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>NewWorkplan</servlet-name>
+		<servlet-class>controllerClinicaDental.NewWorkplan</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewWorkplan</servlet-name>
+		<url-pattern>/newWorkplan</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
 	
 	<servlet>
 		<servlet-name>NuevaConsulta</servlet-name>
@@ -59,12 +122,45 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>NewCurrent_Illness</servlet-name>
-		<servlet-class>controllerClinicaDental.NewCurrent_Illness</servlet-class>
+		<servlet-name>Register_Patient</servlet-name>
+		<servlet-class>controllerClinicaDental.Register_Patient</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>NewCurrent_Illness</servlet-name>
-		<url-pattern>/newCurrent_Illness</url-pattern>
+		<servlet-name>Register_Patient</servlet-name>
+		<url-pattern>/register_Patient</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>ViewPatient</servlet-name>
+		<servlet-class>viewClinicaDental.ViewPatient</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewPatient</servlet-name>
+		<url-pattern>/viewPatient</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ViewNuevaConsulta</servlet-name>
+		<servlet-class>viewClinicaDental.ViewNuevaConsulta</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewNuevaConsulta</servlet-name>
+		<url-pattern>/viewNuevaConsulta</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Search_Dni</servlet-name>
+		<servlet-class>controllerClinicaDental.Search_Dni</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Search_Dni</servlet-name>
+		<url-pattern>/search_Dni</url-pattern>
 	</servlet-mapping>
 	
 	<welcome-file-list>
