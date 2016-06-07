@@ -18,8 +18,8 @@ import javax.jdo.annotations.Extension;
 public class Patient{
 
 	@PrimaryKey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-    private Long id;
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) 
+	private Key key;
     
     
 	@Persistent private String name;
@@ -50,7 +50,7 @@ public class Patient{
 		//private List<Color> color = new ArrayList<Color>();
 		//@Persistent private Query<T>[] query=(Query<T>[]) new Object[2];
 	@Persistent private Dentist dentista;
-	@Persistent(mappedBy = "patient") private List<Query> query;
+//	@Persistent(mappedBy = "patient") private List<Query> query;
 	
 	
 	public Patient() {
@@ -109,6 +109,7 @@ public class Patient{
 		this.name_lastName_companion = name_lastName_companion;
 		this.dentista = dentista;
 	}
+	/**
 	public Patient(String name, int number_historia_clinica, String number_dni, int date_time_care,
 			int opening_date_medical_history, String sex, int age, String birthplace, int birthdate,
 			String degree_instruction, String race, String occupation, String religion, String cvil_status,
@@ -136,23 +137,16 @@ public class Patient{
 		this.query = query;
 	}
 	
-	
+**/
 
-	
-
-
-	
-
-
-
-	public Long getId() {
-		return id;
+	public String getKey() {
+		return KeyFactory.keyToString(this.key);
 	}
 
 
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setKey(Key key) {
+		this.key = key;
 	}
 
 
@@ -265,18 +259,33 @@ public class Patient{
 	public void setDentista(Dentist dentista) {
 		this.dentista = dentista;
 	}
+	/**
 	public List<Query> getQuery() {
 		return query;
 	}
 	public void setQuery(List<Query> query) {
 		this.query = query;
 	}
-
+**/
 
 
 	@Override
 	public String toString() {
-		return "Patient [id=" + id + ", name=" + name + ", number_historia_clinica=" + number_historia_clinica
+		return "Patient [key=" + key + ", name=" + name + ", number_historia_clinica=" + number_historia_clinica
+				+ ", number_dni=" + number_dni + ", date_time_care=" + date_time_care
+				+ ", opening_date_medical_history=" + opening_date_medical_history + ", sex=" + sex + ", age=" + age
+				+ ", birthplace=" + birthplace + ", birthdate=" + birthdate + ", degree_instruction="
+				+ degree_instruction + ", race=" + race + ", occupation=" + occupation + ", religion=" + religion
+				+ ", cvil_status=" + cvil_status + ", place_origin=" + place_origin + ", current_address="
+				+ current_address + ", name_lastName_companion=" + name_lastName_companion + ", dentista=" + dentista
+				+ "]";
+	}
+
+
+/**
+	@Override
+	public String toString() {
+		return "Patient [key=" + key + ", name=" + name + ", number_historia_clinica=" + number_historia_clinica
 				+ ", number_dni=" + number_dni + ", date_time_care=" + date_time_care
 				+ ", opening_date_medical_history=" + opening_date_medical_history + ", sex=" + sex + ", age=" + age
 				+ ", birthplace=" + birthplace + ", birthdate=" + birthdate + ", degree_instruction="
@@ -285,6 +294,10 @@ public class Patient{
 				+ current_address + ", name_lastName_companion=" + name_lastName_companion + ", dentista=" + dentista
 				+ ", query=" + query + "]";
 	}
+
+**/
+
+	
 
 
 

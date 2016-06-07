@@ -14,9 +14,11 @@ import java.util.List;
 
 @SuppressWarnings("serial")
 public class Search_Dni extends HttpServlet {
-	public void doGet(HttpServletRequest req, HttpServletResponse resp)
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		String dni=req.getParameter("dni");
+		HttpSession misesion= request.getSession();
+		String dni=request.getParameter("dni");
+		misesion.setAttribute("dni", dni);
 		System.out.println(dni);
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		
@@ -26,16 +28,20 @@ public class Search_Dni extends HttpServlet {
 		List<Patient> pacientes = (List<Patient>)pm.newQuery(query).execute();
 		
 		if(pacientes.isEmpty())
-			resp.sendRedirect("registrar.jsp");
+			response.sendRedirect("registrar.jsp");
 		
+		/**
 		req.setAttribute("pacientes", pacientes);
-		RequestDispatcher dispatcher =getServletContext().getRequestDispatcher("/consultaPaciente.jsp");
+		RequestDispatcher dispatcher =getServletContext().getRequestDispatcher("/viewPatient");
 		dispatcher.forward(req, resp);
-	
+	// pm.deletePersistent(e);
+		**/
 		
-		
-		
+		else{
 		System.out.println(query);
 		System.out.println(pacientes);
+		response.sendRedirect("/viewPatient");
+		misesion.setAttribute("patientId", pacientes.get(pacientes.size()-1).getKey());
+		}
 	}
 }

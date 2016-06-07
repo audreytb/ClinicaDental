@@ -13,33 +13,33 @@ import javax.servlet.http.HttpSession;
 
 @SuppressWarnings("serial")
 public class Register_Patient extends HttpServlet {
-	public void doGet(HttpServletRequest req, HttpServletResponse resp)
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 		
-		HttpSession misesion= req.getSession();
+		HttpSession misesion= request.getSession();
 		
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		
 		Patient a = new Patient(
-				req.getParameter("name"),
+				request.getParameter("name"),
 				
-				new Integer(req.getParameter("number_historia_clinica")).intValue(),
-				req.getParameter("number_dni"),
+				new Integer(request.getParameter("number_historia_clinica")).intValue(),
+				request.getParameter("number_dni"),
 				
-				new Integer(req.getParameter("date_time_care")).intValue(),
-				new Integer(req.getParameter("opening_date_medical_history")).intValue(),
-				req.getParameter("sex"),
-				new Integer(req.getParameter("age")).intValue(),
-				req.getParameter("birthplace"),
-				new Integer(req.getParameter("birthdate")).intValue(),
-				req.getParameter("degree_instruction"),
-				req.getParameter("race"),
-				req.getParameter("occupation"),
-				req.getParameter("religion"),
-				req.getParameter("cvil_status"),
-				req.getParameter("place_origin"),
-				req.getParameter("current_address"),
-				req.getParameter("name_lastName_companion")
+				new Integer(request.getParameter("date_time_care")).intValue(),
+				new Integer(request.getParameter("opening_date_medical_history")).intValue(),
+				request.getParameter("sex"),
+				new Integer(request.getParameter("age")).intValue(),
+				request.getParameter("birthplace"),
+				new Integer(request.getParameter("birthdate")).intValue(),
+				request.getParameter("degree_instruction"),
+				request.getParameter("race"),
+				request.getParameter("occupation"),
+				request.getParameter("religion"),
+				request.getParameter("cvil_status"),
+				request.getParameter("place_origin"),
+				request.getParameter("current_address"),
+				request.getParameter("name_lastName_companion")
 				);
 		
 				
@@ -50,8 +50,9 @@ public class Register_Patient extends HttpServlet {
 		} finally {
 			pm.close();
 		}
-		misesion.setAttribute("dentistId",a.getId());
-		resp.sendRedirect("viewPatient?action=patientDisplay&patientId="+a.getId());
+		misesion.setAttribute("patientId",a.getKey());
+		//resp.sendRedirect("viewPatient?action=patientDisplay&patientId="+a.getId());
+		response.sendRedirect("viewPatientNew");
 		//System.out.println("aqui");
 		//resp.sendRedirect("searh_Dni?dni=deRegistro&accountId="+a.getId());
 		//System.out.println(a.getId());

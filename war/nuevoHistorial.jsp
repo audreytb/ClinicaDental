@@ -45,7 +45,7 @@
 									<h3>Enfermedad Actual</h3>
 									<form action="newCurrent_Illness" class="form-horizontal" >
 										<div class="form-group container-fluid">
-											<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px"></textarea>
+											<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px" name="enfermedad_actual"></textarea>
 										</div>
 										
 										<div class="form-group ">
@@ -118,14 +118,14 @@
 											<div class="form-group ">
 												<label for="antecedentesFam" class="control-label col-md-2 col-lg-3">Antecedentes Familiares:</label>
 												<div class="col-md-10 col-lg-12">
-													<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px"></textarea>
+													<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px" name="family_background"></textarea>
 												</div>
 											</div>
 											
 											<div class="form-group ">
 												<label for="antecedentesPer" class="control-label col-md-2 col-lg-3">Antecedentes Personales:</label>
 												<div class="col-md-10 col-lg-12">
-													<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px"></textarea>
+													<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px" name="personal_history"></textarea>
 												</div>
 											</div>
 											
@@ -149,35 +149,40 @@
 										<div class="form-group ">
 											<label for="P.A." class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Signos Vitales P.A.</label>
 											<div class="col-lg-1 col-md-2 col-sm-3 col-xs-12">
-												<input type="text" class="form-control" id="nombre"placeholder="P.A.">
+												<input type="text" class="form-control" id="nombre"placeholder="P.A." name="vitalSigns_pa">
 											</div>
 											
 											<label for="Pulso." class="control-label col-lg-1 col-md-1 col-sm-3 col-xs-12">Pulso </label>
 											<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-												<input type="text" class="form-control" id="pulso" placeholder="Pulso">
+												<input type="text" class="form-control" id="pulso" placeholder="Pulso" name="vitalSigns_pulso">
 											</div>
 											
 											<label for="Temperatura" class="control-label col-lg-1 col-md-1 col-sm-3 col-xs-12">Temp </label>
 											<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-												<input type="text" class="form-control" id="nombre"placeholder="Temp">
+												<input type="text" class="form-control" id="nombre"placeholder="Temp" name="vitalSigns_temp">
 											</div>
 											
 											<label for="Frecuencia" class="control-label col-lg-1 col-md-1 col-sm-3 col-xs-12">F.C. </label>
 											<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
-												<input type="text" class="form-control" id="nombre"placeholder="F.C.">
+												<input type="text" class="form-control" id="nombre"placeholder="F.C." name="vitalSigns_fc">
+											</div>
+											
+											<label for="Frecuencia" class="control-label col-lg-1 col-md-1 col-sm-3 col-xs-12">F.C. </label>
+											<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+												<input type="text" class="form-control" id="nombre"placeholder="F.C." name="vitalSigns_frecResp">
 											</div>
 											
 											<div class="form-group ">
 												<label for="examCG" class="control-label col-md-2 col-lg-3">Examen Clinico General:</label>
 												<div class="col-md-10 col-lg-8">
-													<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px"></textarea>
+													<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px" name="clinica_examination"></textarea>
 												</div>
 											</div>
 											
 											<div class="form-group ">
 												<label for="odontoestomatologico" class="control-label col-md-2 col-lg-3">Odontoestomatologico:</label>
 												<div class="col-md-10 col-lg-8">
-													<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px"></textarea>
+													<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px" name="odontoestomatologico"></textarea>
 												</div>
 											</div>
 										</div>
@@ -199,14 +204,14 @@
 										<div class="form-group ">
 											<label for="diagPres" class="control-label col-lg-2 col-md-6 col-sm-3 col-xs-12">Diagnostico Presuntivo:</label>
 											<div div class="col-md-10 col-lg-10">
-												<textarea class="col-lg-10 col-md-12 col-sm-12 col-xs-12" rows="5px"></textarea>
+												<textarea class="col-lg-10 col-md-12 col-sm-12 col-xs-12" rows="5px" name="presumptive_diagnosis"></textarea>
 											</div>
 										</div>
 										
 										<div class="form-group ">
 											<label for="diagDef" class="control-label col-lg-2 col-md-6 col-sm-3 col-xs-12">Diagnostico Definitivo:</label>
 											<div div class="col-md-10 col-lg-10">
-												<textarea class="col-lg-10 col-md-12 col-sm-12 col-xs-12" rows="5px"></textarea>
+												<textarea class="col-lg-10 col-md-12 col-sm-12 col-xs-12" rows="5px" name="definitive_diagnosis"></textarea>
 											</div>
 										</div>
 										
@@ -227,7 +232,7 @@
 									<form action="newWorkplan" class="form-horizontal" >
 										<div class="form-group ">
 											<div div class="col-md-10 col-lg-12">
-												<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px"></textarea>
+												<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px" name="work_plan"></textarea>
 											</div>
 										</div>
 										
@@ -248,7 +253,7 @@
 									<form action="newForecast" class="form-horizontal" >
 										<div class="form-group ">
 											<div div class="col-md-10 col-lg-12">
-												<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px"></textarea>
+												<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px" name="fore_cast"></textarea>
 											</div>
 										</div>
 										
@@ -269,20 +274,20 @@
 									<h3>Tratamiento/ Recomendaciones</h3>
 									<form action="newTreatment_Recomendation" class="form-horizontal" >
 										<div class="form-group container-fluid">
-											<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px"></textarea>
+											<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px" name="treatmentRecomendations"></textarea>
 										</div>
 										
 										<div class="form-group ">
 											<label for="nombreMed" class="control-label col-md-2 col-lg-2">Nombre Generico del Medico:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="nombreMed"placeholder="Nombre">
+												<input type="text" class="form-control" id="nombreMed"placeholder="Nombre" name="generic_drug_name">
 											</div>
 										</div>	
 								
 										<div class="form-group ">
 											<label for="dosis" class="control-label col-md-2 col-lg-2">Dosis:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="dosis" placeholder="Dosis">
+												<input type="text" class="form-control" id="dosis" placeholder="Dosis" name="dose">
 												
 											</div>
 										</div>
@@ -290,7 +295,7 @@
 										<div class="form-group ">
 											<label for="administracion" class="control-label col-md-2 col-lg-2">Via de Administración:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="administracion" placeholder="Via de Administracion">
+												<input type="text" class="form-control" id="administracion" placeholder="Via de Administracion" name="way_administration">
 												
 											</div>
 										</div>
@@ -298,7 +303,7 @@
 										<div class="form-group ">
 											<label for="cuidados" class="control-label col-md-2 col-lg-2">Cuidados:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="cuidados" placeholder="Cuidados">
+												<input type="text" class="form-control" id="cuidados" placeholder="Cuidados" name="care">
 												
 											</div>
 										</div>
@@ -306,7 +311,7 @@
 										<div class="form-group ">
 											<label for="Medidas" class="control-label col-md-2 col-lg-2">Medidas higiénico-dietéticas:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="medidas" placeholder="Medidas">
+												<input type="text" class="form-control" id="medidas" placeholder="Medidas" name="hygiene_measures_dietary">
 												
 											</div>
 										</div>
@@ -314,7 +319,7 @@
 										<div class="form-group ">
 											<label for="preventivos" class="control-label col-md-2 col-lg-2">Preventivos:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="preventivos" placeholder="Preventivos">
+												<input type="text" class="form-control" id="preventivos" placeholder="Preventivos" name="preventive">
 												
 											</div>
 										</div>
@@ -360,7 +365,7 @@
 										<div class="form-group ">
 											<label for="especificaciones" class="control-label col-md-2 col-lg-2">Especificaciones:</label>
 											<div class="col-md-10 col-lg-10">
-												<input type="text" class="form-control" id="Especificaciones" placeholder="Especificaciones">
+												<input type="text" class="form-control" id="Especificaciones" placeholder="Especificaciones" name="odontogram">
 												
 											</div>
 										</div>

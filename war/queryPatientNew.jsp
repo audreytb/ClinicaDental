@@ -8,18 +8,7 @@
 	
 	Patient patient = (Patient) request.getAttribute("patient");
 	List<Query> consultas = (List<Query>) request.getAttribute("consultas");
-	//if(!consultas.isEmpty()){}
-	Background background=(Background)request.getAttribute("background");
-	Current_Illness current=(Current_Illness)request.getAttribute("current");
-	Diagnosis diagnosis=(Diagnosis)request.getAttribute("diagnosis");
-	Forecast forecast=(Forecast)request.getAttribute("forecast");
-	Odontograma odontograma=(Odontograma)request.getAttribute("odontograma");
-	Patient_Discharge discharge=(Patient_Discharge)request.getAttribute("discharge");
-	PhysicalExploration physical=(PhysicalExploration)request.getAttribute("physical");
-	Treatment_Recomendation treatment=(Treatment_Recomendation)request.getAttribute("treatment");
-	Workplan workplan=(Workplan)request.getAttribute("workplan");
-	
-	
+
 	//SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -162,29 +151,6 @@
 					    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 					      <div class="panel-body">
 					      
-					      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-					      		<ul class="list-group">
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=current.getEnfermedad_actual()%></li>
-									<li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-plus-sign "></span> Numero de Historia Clinica: </li>
-									<li class="list-group-item"><%=current.getData_reporting()%></li>
-									<li class="list-group-item list-group-item-info"><span class="glyphicon glyphicon-list-alt "></span> Numero de DNI: </li>
-									<li class="list-group-item"><%=current.getReason_consultation()%></li>
-									<li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-eye-open "></span> Sexo: </li>
-									<li class="list-group-item"><%=current.getSick_time()%></li>
-									
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Edad: </li>
-									<li class="list-group-item"><%=current.getSigns_symptoms_main()%></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=current.getChronological_story()%></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=current.getBiological_functions()%></li>
-								
-									
-								</ul>
-					      	</div>
-					      
-					     
 					      
 					      
 					      
@@ -204,17 +170,7 @@
 					    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
 					      <div class="panel-body">
 							
-												      
-					        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-					      		<ul class="list-group">
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=background.getFamily_background()%></li>
-									<li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-plus-sign "></span> Numero de Historia Clinica: </li>
-									<li class="list-group-item"><%=background.getPersonal_history() %></li>
-									
-								</ul>
-					      	</div>
-					   
+					      
 					      </div>
 					    </div>
 					  </div>
@@ -230,29 +186,6 @@
 					    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
 					      <div class="panel-body">
 					        
-					      
-							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-					      		<ul class="list-group">
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=physical.getVitalSigns_pa()%></li>
-									<li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-plus-sign "></span> Numero de Historia Clinica: </li>
-									<li class="list-group-item"><%=physical.getVitalSigns_pulso()%></li>
-									<li class="list-group-item list-group-item-info"><span class="glyphicon glyphicon-list-alt "></span> Numero de DNI: </li>
-									<li class="list-group-item"><%=physical.getVitalSigns_temp()%></li>
-									<li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-eye-open "></span> Sexo: </li>
-									<li class="list-group-item"><%=physical.getVitalSigns_fc()%></li>
-									
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Edad: </li>
-									<li class="list-group-item"><%=physical.getVitalSigns_frecResp()%></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=physical.getClinica_examination()%></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=physical.getOdontoestomatologico()%></li>
-								
-									
-								</ul>
-					      	</div>					     
-					   
 					     
 					      </div>
 					    </div>
@@ -269,19 +202,6 @@
 					    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
 					      <div class="panel-body">
 					        
-					        
-					       
-							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-					      		<ul class="list-group">
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=diagnosis.getPresumptive_diagnosis()%></li>
-									<li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-plus-sign "></span> Numero de Historia Clinica: </li>
-									<li class="list-group-item"><%=diagnosis.getDefinitive_diagnosis()%></li>						
-								
-									
-								</ul>
-					      	</div>	
-					   
 					      	
 					      						     
 					      </div>
@@ -298,17 +218,7 @@
 					    </div>
 					    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
 					      <div class="panel-body">
-					     	 
-					     	
-							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-					      		<ul class="list-group">
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=workplan.getWork_plan()%></li>
-									
-									
-								</ul>
-					      	</div>
-					      				      
+					     	 				      
 					      
 					      </div>
 					    </div>
@@ -324,19 +234,7 @@
 					    </div>
 					    <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
 					      <div class="panel-body">
-					        
-					      
-					        
-							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-					      		<ul class="list-group">
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=forecast.getFore_cast()%></li>
-
-									
-								</ul>
-					      	</div>	
-					      	
-					      			     
+					             
 					     
 					      </div>
 					    </div>
@@ -353,31 +251,6 @@
 					    <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
 					      <div class="panel-body">
 					        
-					        
-					        
-							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-					      		<ul class="list-group">
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=treatment.getTreatmentRecomendations()%></li>
-									<li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-plus-sign "></span> Numero de Historia Clinica: </li>
-									<li class="list-group-item"><%=treatment.getGeneric_drug_name()%></li>
-									<li class="list-group-item list-group-item-info"><span class="glyphicon glyphicon-list-alt "></span> Numero de DNI: </li>
-									<li class="list-group-item"><%=treatment.getDose()%></li>
-									<li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-eye-open "></span> Sexo: </li>
-									<li class="list-group-item"><%=treatment.getWay_administration()%></li>
-									
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Edad: </li>
-									<li class="list-group-item"><%=treatment.getCare()%></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=treatment.getHygiene_measures_dietary()%></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=treatment.getPreventive()%></li>
-								
-									
-								</ul>
-					      	</div>						     
-					     	
-					    
 					     
 					      </div>
 					    </div>
@@ -394,18 +267,6 @@
 					    <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
 					      <div class="panel-body">
 					       
-					       
-							 
-							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-					      		<ul class="list-group">
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=odontograma.getOdontogram()%></li>
-
-									
-								</ul>
-					      	</div>					      
-					      	
-					   
 					      
 					      
 					      </div>

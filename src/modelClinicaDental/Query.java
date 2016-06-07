@@ -29,7 +29,7 @@ public class Query{
 	@Persistent private Treatment_Recomendation treatment_recomendation;
 	@Persistent private Workplan workplan;
 	
-	@Persistent private Patient patient;
+	//@Persistent private Patient patient;
 	@Persistent private Long queryId;
 
 	public Query() {
@@ -128,7 +128,7 @@ public class Query{
 	public void setWorkplan(Workplan workplan) {
 		this.workplan = workplan;
 	}
-
+/**
 	public Patient getPatient() {
 		return patient;
 	}
@@ -136,7 +136,7 @@ public class Query{
 	public void setPatient(Patient patient) {
 		this.patient = patient;
 	}
-
+**/
 	public Long getQueryId() {
 		return queryId;
 	}
@@ -144,7 +144,7 @@ public class Query{
 	public void setQueryId(Long queryId) {
 		this.queryId = queryId;
 	}
-
+/**
 	@Override
 	public String toString() {
 		return "Query [key=" + key + ", querys=" + querys + ", background=" + background + ", current_illness="
@@ -153,7 +153,16 @@ public class Query{
 				+ physical_exploration + ", treatment_recomendation=" + treatment_recomendation + ", workplan="
 				+ workplan + ", patient=" + patient + ", queryId=" + queryId + "]";
 	}
+**/
 
+	@Override
+	public String toString() {
+		return "Query [key=" + key + ", querys=" + querys + ", background=" + background + ", current_illness="
+				+ current_illness + ", diagnosis=" + diagnosis + ", forecast=" + forecast + ", odontograma="
+				+ odontograma + ", patient_discharge=" + patient_discharge + ", physical_exploration="
+				+ physical_exploration + ", treatment_recomendation=" + treatment_recomendation + ", workplan="
+				+ workplan + ", queryId=" + queryId + "]";
+	}
 	
 	
 
