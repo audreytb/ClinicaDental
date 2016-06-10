@@ -25,7 +25,7 @@ resp.setContentType("text/plain");
 		HttpSession misesion= req.getSession();
 		
 		if(req.getParameter("action").equals("salir")){
-			resp.sendRedirect("guardarConsulta");
+			resp.sendRedirect("viewPatient");
 		}
 		
 		else if(req.getParameter("action").equals("data")&&misesion.getAttribute("clickBackground")==null){
@@ -56,7 +56,7 @@ resp.setContentType("text/plain");
 			}
 			resp.getWriter().println(consulta);
 
-			resp.sendRedirect("nuevoHistorial.jsp");
+			resp.sendRedirect("viewNuevaConsulta");
 			
 		}
 		else{
@@ -85,7 +85,7 @@ resp.setContentType("text/plain");
 			} finally {
 					
 			    	pm.close();
-			    	resp.sendRedirect("nuevoHistorial.jsp");
+			    	resp.sendRedirect("viewNuevaConsulta");
 			}
 			    	
 			

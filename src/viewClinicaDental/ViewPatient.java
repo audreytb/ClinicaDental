@@ -4,79 +4,82 @@ import  javax.servlet.*;
 import java.io.IOException;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
-import modelClinicaDental.Patient;
+
 import javax.jdo.PersistenceManager;
 import modelClinicaDental.*;
-import modelClinicaDental.Query;
+
 import java.util.List;
 import com.google.appengine.api.datastore.KeyFactory;
 @SuppressWarnings("serial")
 public class ViewPatient extends HttpServlet {
-	public void doGet(HttpServletRequest request, HttpServletResponse
-			response) throws ServletException, IOException {
-		HttpSession misesion= request.getSession();
+	public void doGet(HttpServletRequest req, HttpServletResponse
+			resp) throws ServletException, IOException {
+		HttpSession misesion= req.getSession();
 		
-		String patientKey=(String)misesion.getAttribute("patientId");
+		String patientId=(String)misesion.getAttribute("patientId");
 		String queryKey=(String)misesion.getAttribute("queryKey");
 		
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		//Key k = KeyFactory.createKey(Patient.class.getSimpleName(), new Long(request.getParameter("patientId")));
 		
 		
-		Key keypatient=KeyFactory.stringToKey(patientKey);
+		Key keypatient=KeyFactory.stringToKey(patientId);
 		Patient paciente = pm.getObjectById(Patient.class, keypatient);
 		
-		String query = "select from " + 
-				Query.class.getName() + " where queryId =="
-				+request.getParameter("patientId");		
+		String query = "select from " + Query.class.getName() + " where queryId ==" +patientId;		
 		List<Query> consultas = (List<Query>)pm.newQuery(query).execute();
 		
-		request.setAttribute("patient", paciente);
-		request.setAttribute("consultas", consultas);
+		req.setAttribute("patient", paciente);
+		req.setAttribute("consultas", consultas);
 		
 		if(misesion.getAttribute("queryKey")==null){
-			response.sendRedirect("viewPatientNew");
+			resp.sendRedirect("viewPatientNew");
 			
 		}
 		else{
 			System.out.println((String)misesion.getAttribute("queryKey"));
-			Key keybackground=KeyFactory.stringToKey((String)misesion.getAttribute("queryKey"));
+			Key keybackground=KeyFactory.stringToKey((String)misesion.getAttribute("queryBackground"));
 			Background background = pm.getObjectById(Background.class, keybackground);
-			request.setAttribute("background", background);
+			req.setAttribute("background", background);
 			
 			System.out.println(background);
 			
-			Key keycurrent=KeyFactory.stringToKey((String)misesion.getAttribute("queryKey"));
+			Key keycurrent=KeyFactory.stringToKey((String)misesion.getAttribute("queryCurrent"));
 			Current_Illness current = pm.getObjectById(Current_Illness.class, keycurrent);
-			request.setAttribute("current", current);
+			req.setAttribute("current", current);
 			
-			Key keydiagnosis=KeyFactory.stringToKey((String)misesion.getAttribute("queryKey"));
+			Key keydiagnosis=KeyFactory.stringToKey((String)misesion.getAttribute("queryDiagnosis"));
 			Diagnosis diagnosis = pm.getObjectById(Diagnosis.class, keydiagnosis);
-			request.setAttribute("diagnosis", diagnosis);
+			req.setAttribute("diagnosis", diagnosis);
 			
-			Key keyforecast=KeyFactory.stringToKey((String)misesion.getAttribute("queryKey"));
+			Key keyforecast=KeyFactory.stringToKey((String)misesion.getAttribute("queryForecast"));
 			Forecast forecast = pm.getObjectById(Forecast.class, keyforecast);
-			request.setAttribute("forecast", forecast);
+			req.setAttribute("forecast", forecast);
 			
-			Key keyodontograma=KeyFactory.stringToKey((String)misesion.getAttribute("queryKey"));
+			Key keyodontograma=KeyFactory.stringToKey((String)misesion.getAttribute("queryOdontograma"));
 			Odontograma odontograma = pm.getObjectById(Odontograma.class, keyodontograma);
-			request.setAttribute("odontograma", odontograma);
+			req.setAttribute("odontograma", odontograma);
 			
-			Key keydischarge=KeyFactory.stringToKey((String)misesion.getAttribute("queryKey"));
+			Key keydischarge=KeyFactory.stringToKey((String)misesion.getAttribute("queryPatient_Discharge"));
 			Patient_Discharge discharge = pm.getObjectById(Patient_Discharge.class, keydischarge);
-			request.setAttribute("discharge", discharge);
+			req.setAttribute("discharge", discharge);
 			
-			Key keyphysical=KeyFactory.stringToKey((String)misesion.getAttribute("queryKey"));
+			Key keyphysical=KeyFactory.stringToKey((String)misesion.getAttribute("queryPhysicalExploration"));
 			PhysicalExploration physical = pm.getObjectById(PhysicalExploration.class, keyphysical);
-			request.setAttribute("physical", physical);
+			req.setAttribute("physical", physical);
 			
-			Key keytreatment=KeyFactory.stringToKey((String)misesion.getAttribute("queryKey"));
+			Key keytreatment=KeyFactory.stringToKey((String)misesion.getAttribute("queryTreatment_Recomendation"));
 			Treatment_Recomendation treatment = pm.getObjectById(Treatment_Recomendation.class, keytreatment);
-			request.setAttribute("treatment", treatment);
+			req.setAttribute("treatment", treatment);
 			
-			Key keyworkplan=KeyFactory.stringToKey((String)misesion.getAttribute("queryKey"));
+			Key keyworkplan=KeyFactory.stringToKey((String)misesion.getAttribute("queryWorkplan"));
 			Workplan workplan = pm.getObjectById(Workplan.class, keyworkplan);
-			request.setAttribute("workplan", workplan);
+			req.setAttribute("workplan", workplan);
+			
+			
+			pm.close();
+			RequestDispatcher dispatcher =req.getRequestDispatcher("/queryPatient.jsp");
+			dispatcher.forward(req, resp);
 		
 		}
 		//}
@@ -128,12 +131,14 @@ public class ViewPatient extends HttpServlet {
 		**/
 		
 	
-		pm.close();//agregado
 		
 		
-		//RequestDispatcher dispatcher =getServletContext().getRequestDispatcher("/queryPatient.jsp");
-		//dispatcher.forward(request, response);
 		
-		
+	}
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse
+			response)
+					throws ServletException, IOException {
+		doGet(request, response);
 	}
 }

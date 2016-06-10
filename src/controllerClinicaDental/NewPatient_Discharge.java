@@ -26,7 +26,7 @@ public class NewPatient_Discharge extends HttpServlet {
 		HttpSession misesion= req.getSession();
 		
 		if(req.getParameter("action").equals("salir")){
-			resp.sendRedirect("guardarConsulta");
+			resp.sendRedirect("viewPatient");
 		}
 		
 		else if(req.getParameter("action").equals("data")&&misesion.getAttribute("clickPatient_Discharge")==null){
@@ -53,7 +53,7 @@ public class NewPatient_Discharge extends HttpServlet {
 			}
 			resp.getWriter().println(consulta);
 
-			resp.sendRedirect("nuevoHistorial.jsp");
+			resp.sendRedirect("viewNuevaConsulta");
 		}else{
 			
 			
@@ -71,7 +71,7 @@ public class NewPatient_Discharge extends HttpServlet {
 			} finally {
 					
 			    	pm.close();
-			    	resp.sendRedirect("nuevoHistorial.jsp");
+			    	resp.sendRedirect("viewNuevaConsulta");
 			}
 			    	
 			

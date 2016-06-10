@@ -25,7 +25,7 @@ public class NewOdontograma extends HttpServlet {
 		HttpSession misesion= req.getSession();
 		
 		if(req.getParameter("action").equals("salir")){
-			resp.sendRedirect("guardarConsulta");
+			resp.sendRedirect("viewPatient");
 		}
 		
 		else if(req.getParameter("action").equals("data")&&misesion.getAttribute("clickOdontograma")==null){
@@ -53,7 +53,7 @@ public class NewOdontograma extends HttpServlet {
 			}
 			resp.getWriter().println(consulta);
 
-			resp.sendRedirect("nuevoHistorial.jsp");
+			resp.sendRedirect("viewNuevaConsulta");
 		
 		}else{
 			
@@ -72,7 +72,7 @@ public class NewOdontograma extends HttpServlet {
 			} finally {
 					
 			    	pm.close();
-			    	resp.sendRedirect("nuevoHistorial.jsp");
+			    	resp.sendRedirect("viewNuevaConsulta");
 			}
 			    	
 			

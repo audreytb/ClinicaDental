@@ -26,7 +26,7 @@ public class NewPhysicalExploration extends HttpServlet {
 		HttpSession misesion= req.getSession();
 		
 		if(req.getParameter("action").equals("salir")){
-			resp.sendRedirect("guardarConsulta");
+			resp.sendRedirect("viewPatient");
 		}
 		
 		else if(req.getParameter("action").equals("data")&&misesion.getAttribute("clickPhysicalExploration")==null){
@@ -61,7 +61,7 @@ public class NewPhysicalExploration extends HttpServlet {
 			}
 			resp.getWriter().println(consulta);
 
-			resp.sendRedirect("nuevoHistorial.jsp");
+			resp.sendRedirect("viewNuevaConsulta");
 		}else{
 			
 			
@@ -85,7 +85,7 @@ public class NewPhysicalExploration extends HttpServlet {
 			} finally {
 					
 			    	pm.close();
-			    	resp.sendRedirect("nuevoHistorial.jsp");
+			    	resp.sendRedirect("viewNuevaConsulta");
 			}
 			    	
 			

@@ -26,7 +26,7 @@ public class NewWorkplan extends HttpServlet {
 		HttpSession misesion= req.getSession();
 		
 		if(req.getParameter("action").equals("salir")){
-			resp.sendRedirect("guardarConsulta");
+			resp.sendRedirect("viewPatient");
 		}
 		
 		else if(req.getParameter("action").equals("data")&&misesion.getAttribute("clickWorkplan")==null){
@@ -53,7 +53,7 @@ public class NewWorkplan extends HttpServlet {
 			}
 			resp.getWriter().println(consulta);
 
-			resp.sendRedirect("nuevoHistorial.jsp");
+			resp.sendRedirect("viewNuevaConsulta");
 		}else{
 			
 			
@@ -71,7 +71,7 @@ public class NewWorkplan extends HttpServlet {
 			} finally {
 					
 			    	pm.close();
-			    	resp.sendRedirect("nuevoHistorial.jsp");
+			    	resp.sendRedirect("viewNuevaConsulta");
 			}
 			    	
 			
