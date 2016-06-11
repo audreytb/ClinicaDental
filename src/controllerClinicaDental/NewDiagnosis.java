@@ -1,5 +1,6 @@
 package controllerClinicaDental;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -23,7 +24,7 @@ public class NewDiagnosis extends HttpServlet {
 		
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		HttpSession misesion= req.getSession();
-		
+		ArrayList <String> diagnosis=(ArrayList <String>)misesion.getAttribute("diagnosis");
 		if(req.getParameter("action").equals("salir")){
 			resp.sendRedirect("viewPatient");
 		}
@@ -37,6 +38,9 @@ public class NewDiagnosis extends HttpServlet {
 					);
 			boolean click=true;
 			misesion.setAttribute("clickBackground", click);
+			diagnosis.add(req.getParameter("presumptive_diagnosis"));
+			diagnosis.add(req.getParameter("definitive_diagnosis"));
+			misesion.setAttribute("diagonis", diagnosis);
 			// persist the entity
 			try {
 				pm.makePersistent(consulta);
@@ -69,9 +73,10 @@ public class NewDiagnosis extends HttpServlet {
 			
 					illnes.setPresumptive_diagnosis(req.getParameter("presumptive_diagnosis"));
 					illnes.setDefinitive_diagnosis(req.getParameter("definitive_diagnosis"));
-				
-					System.out.println(illnes);
 					
+					diagnosis.set(0, req.getParameter("presumptive_diagnosis"));
+					diagnosis.set(1, req.getParameter("definitive_diagnosis"));
+					misesion.setAttribute("diagonis", diagnosis);
 			} finally {
 					
 			    	pm.close();

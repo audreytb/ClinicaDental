@@ -1,5 +1,6 @@
 package controllerClinicaDental;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -23,7 +24,7 @@ resp.setContentType("text/plain");
 		
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		HttpSession misesion= req.getSession();
-		
+		ArrayList <String> background=(ArrayList <String>)misesion.getAttribute("background");
 		if(req.getParameter("action").equals("salir")){
 			resp.sendRedirect("viewPatient");
 		}
@@ -36,7 +37,9 @@ resp.setContentType("text/plain");
 					);
 			boolean click=true;
 			misesion.setAttribute("clickBackground", click);
-			
+			background.add(req.getParameter("family_background"));
+			background.add(req.getParameter("personal_history"));
+			misesion.setAttribute("background", background);
 			// persist the entity
 			try {
 				pm.makePersistent(consulta);
@@ -79,7 +82,10 @@ resp.setContentType("text/plain");
 					 */
 					back.setFamily_background(req.getParameter("family_background"));
 					back.setPersonal_history(req.getParameter("personal_history"));
-				
+					
+					background.set(0, req.getParameter("family_background"));
+					background.set(1, req.getParameter("personal_history"));
+					misesion.setAttribute("background", background);
 					System.out.println(back);
 					
 			} finally {

@@ -1,5 +1,6 @@
 package controllerClinicaDental;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -24,7 +25,7 @@ public class NewPhysicalExploration extends HttpServlet {
 		
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		HttpSession misesion= req.getSession();
-		
+		ArrayList <String> physical=(ArrayList <String>)misesion.getAttribute("physical");
 		if(req.getParameter("action").equals("salir")){
 			resp.sendRedirect("viewPatient");
 		}
@@ -43,6 +44,14 @@ public class NewPhysicalExploration extends HttpServlet {
 					);
 			boolean click=true;
 			misesion.setAttribute("clickPhysicalExploration", click);
+			physical.add(req.getParameter("vitalSigns_pa"));
+			physical.add(req.getParameter("vitalSigns_pulso"));
+			physical.add(req.getParameter("vitalSigns_temp"));
+			physical.add(req.getParameter("vitalSigns_fc"));
+			physical.add(req.getParameter("vitalSigns_frecResp"));
+			physical.add(req.getParameter("clinica_examination"));
+			physical.add(req.getParameter("odontoestomatologico"));
+			misesion.setAttribute("physical", physical);
 			// persist the entity
 			try {
 				pm.makePersistent(consulta);
@@ -79,7 +88,15 @@ public class NewPhysicalExploration extends HttpServlet {
 					back.setVitalSigns_frecResp(req.getParameter("vitalSigns_frecResp"));
 					back.setClinica_examination(req.getParameter("clinica_examination"));
 					back.setOdontoestomatologico(req.getParameter("odontoestomatologico"));
-				
+					
+					physical.set(0, req.getParameter("vitalSigns_pa"));
+					physical.set(1, req.getParameter("vitalSigns_pulso"));
+					physical.set(2, req.getParameter("vitalSigns_temp"));
+					physical.set(3, req.getParameter("vitalSigns_fc"));
+					physical.set(4, req.getParameter("vitalSigns_frecResp"));
+					physical.set(5, req.getParameter("clinica_examination"));
+					physical.set(6, req.getParameter("odontoestomatologico"));
+					misesion.setAttribute("physical", physical);
 					System.out.println(back);
 					
 			} finally {

@@ -1,5 +1,6 @@
 package controllerClinicaDental;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -24,7 +25,7 @@ public class NewPatient_Discharge extends HttpServlet {
 		
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		HttpSession misesion= req.getSession();
-		
+		ArrayList <String> discharge=(ArrayList <String>)misesion.getAttribute("discharge");
 		if(req.getParameter("action").equals("salir")){
 			resp.sendRedirect("viewPatient");
 		}
@@ -36,6 +37,8 @@ public class NewPatient_Discharge extends HttpServlet {
 					);
 			boolean click=true;
 			misesion.setAttribute("clickPatient_Discharge", click);
+			discharge.add(req.getParameter("patientDischarge"));
+			misesion.setAttribute("discharge", discharge);
 			// persist the entity
 			try {
 				pm.makePersistent(consulta);
@@ -65,6 +68,11 @@ public class NewPatient_Discharge extends HttpServlet {
 					
 					
 					back.setPatient_dischargeId(req.getParameter("patientDischarge"));
+					discharge.set(0, req.getParameter("patientDischarge"));
+					
+					misesion.setAttribute("discharge", discharge);
+					
+					
 				
 					System.out.println(back);
 					

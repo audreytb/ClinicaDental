@@ -30,7 +30,7 @@ public class Query{
 	@Persistent private Workplan workplan;
 	**/
 	//@Persistent private Patient patient;
-	@Persistent private Long queryId;
+	@Persistent private String queryId;
 
 	public Query() {
 		
@@ -47,11 +47,11 @@ public class Query{
 				Query.class.getSimpleName(), java.util.UUID.randomUUID().toString());
 	}
 
-	public Long getQueryId() {
+	public String getQueryId() {
 		return queryId;
 	}
 
-	public void setQueryId(Long queryId) {
+	public void setQueryId(String queryId) {
 		this.queryId = queryId;
 	}
 

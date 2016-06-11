@@ -1,5 +1,6 @@
 package controllerClinicaDental;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -23,7 +24,7 @@ public class NewCurrent_Illness extends HttpServlet {
 		
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		HttpSession misesion= req.getSession();
-		
+		ArrayList <String> current=(ArrayList <String>)misesion.getAttribute("current");
 		if(req.getParameter("action").equals("salir")){
 			resp.sendRedirect("viewPatient");
 		}
@@ -41,7 +42,14 @@ public class NewCurrent_Illness extends HttpServlet {
 					);
 			boolean click=true;
 			misesion.setAttribute("clickCurrent", click);
-			
+			current.add(req.getParameter("enfermedad_actual"));
+			current.add(req.getParameter("data_reporting"));
+			current.add(req.getParameter("reason_consultation"));
+			current.add(req.getParameter("sick_time"));
+			current.add(req.getParameter("signs_symptoms_main"));
+			current.add(req.getParameter("chronological_story"));
+			current.add(req.getParameter("biological_functions"));
+			misesion.setAttribute("current", current);
 			// persist the entity
 			try {
 				pm.makePersistent(consulta);
@@ -81,7 +89,9 @@ public class NewCurrent_Illness extends HttpServlet {
 					req.getParameter("chronological_story"),
 					req.getParameter("biological_functions"),
 					(String)misesion.getAttribute("queryKey")
+					
 					 */
+					illnes.setEnfermedad_actual(req.getParameter("enfermedad_actual"));
 					illnes.setData_reporting(req.getParameter("data_reporting"));
 					illnes.setReason_consultation(req.getParameter("reason_consultation"));
 					illnes.setSick_time(req.getParameter("sick_time"));
@@ -90,6 +100,15 @@ public class NewCurrent_Illness extends HttpServlet {
 					illnes.setBiological_functions(req.getParameter("biological_functions"));
 					System.out.println(illnes);
 					
+					
+					current.set(0, req.getParameter("enfermedad_actual"));
+					current.set(1, req.getParameter("data_reporting"));
+					current.set(2, req.getParameter("reason_consultation"));
+					current.set(3, req.getParameter("sick_time"));
+					current.set(4, req.getParameter("signs_symptoms_main"));
+					current.set(5, req.getParameter("chronological_story"));
+					current.set(6, req.getParameter("biological_functions"));
+					misesion.setAttribute("current", current);
 			} finally {
 					
 			    	pm.close();

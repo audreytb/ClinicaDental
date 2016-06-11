@@ -1,5 +1,6 @@
 package controllerClinicaDental;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -24,7 +25,7 @@ public class NewTreatment_Recomendation extends HttpServlet {
 		
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		HttpSession misesion= req.getSession();
-		
+		ArrayList <String> treatment=(ArrayList <String>)misesion.getAttribute("treatment");
 		if(req.getParameter("action").equals("salir")){
 			resp.sendRedirect("viewPatient");
 		}
@@ -43,6 +44,16 @@ public class NewTreatment_Recomendation extends HttpServlet {
 					);
 			boolean click=true;
 			misesion.setAttribute("clickTreatment_Recomendation", click);
+			
+			treatment.add(req.getParameter("treatmentRecomendations"));
+			treatment.add(req.getParameter("generic_drug_name"));
+			treatment.add(req.getParameter("dose"));
+			treatment.add(req.getParameter("way_administration"));
+			treatment.add(req.getParameter("care"));
+			treatment.add(req.getParameter("hygiene_measures_dietary"));
+			treatment.add(req.getParameter("preventive"));
+			
+			misesion.setAttribute("treatment", treatment);
 			// persist the entity
 			try {
 				pm.makePersistent(consulta);
@@ -79,7 +90,16 @@ public class NewTreatment_Recomendation extends HttpServlet {
 					back.setCare(req.getParameter("care"));
 					back.setHygiene_measures_dietary(req.getParameter("hygiene_measures_dietary"));
 					back.setPreventive(req.getParameter("preventive"));
-				
+					
+					treatment.set(0, req.getParameter("treatmentRecomendations"));
+					treatment.set(1, req.getParameter("generic_drug_name"));
+					treatment.set(2, req.getParameter("dose"));
+					treatment.set(3, req.getParameter("way_administration"));
+					treatment.set(4, req.getParameter("care"));
+					treatment.set(5, req.getParameter("hygiene_measures_dietary"));
+					treatment.set(6, req.getParameter("preventive"));
+					
+					misesion.setAttribute("treatment", treatment);
 					System.out.println(back);
 					
 			} finally {

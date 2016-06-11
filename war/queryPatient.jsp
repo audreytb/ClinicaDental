@@ -3,21 +3,21 @@
 <%@ page import="modelClinicaDental.*"%>
 <%@ page import="modelClinicaDental.Query"%>
 <%@ page import="java.util.List"%>
-
+<%@ page import="java.util.ArrayList"%>
 <%
 	
 	Patient patient = (Patient) request.getAttribute("patient");
 	List<Query> consultas = (List<Query>) request.getAttribute("consultas");
 	//if(!consultas.isEmpty()){}
-	Background background=(Background)request.getAttribute("background");
-	Current_Illness current=(Current_Illness)request.getAttribute("current");
-	Diagnosis diagnosis=(Diagnosis)request.getAttribute("diagnosis");
-	Forecast forecast=(Forecast)request.getAttribute("forecast");
-	Odontograma odontograma=(Odontograma)request.getAttribute("odontograma");
-	Patient_Discharge discharge=(Patient_Discharge)request.getAttribute("discharge");
-	PhysicalExploration physical=(PhysicalExploration)request.getAttribute("physical");
-	Treatment_Recomendation treatment=(Treatment_Recomendation)request.getAttribute("treatment");
-	Workplan workplan=(Workplan)request.getAttribute("workplan");
+	List<String> background=(ArrayList<String>)request.getAttribute("background");
+	List<String> current=(ArrayList<String>)request.getAttribute("current");
+	List<String> diagnosis=(ArrayList<String>)request.getAttribute("diagnosis");
+	List<String> forecast=(ArrayList<String>)request.getAttribute("forecast");
+	List<String> odontograma=(ArrayList<String>)request.getAttribute("odontograma");
+	List<String> discharge=(ArrayList<String>)request.getAttribute("discharge");
+	List<String> physical=(ArrayList<String>)request.getAttribute("physical");
+	List<String> treatment=(ArrayList<String>)request.getAttribute("treatment");
+	List<String> workplan=(ArrayList<String>)request.getAttribute("workplan");
 	
 	
 	//SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
@@ -161,30 +161,31 @@
 					    </div>
 					    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 					      <div class="panel-body">
-					      
+					      <%if(current.size()>0){ %>
 					      <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 					      		<ul class="list-group">
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=current.getEnfermedad_actual()%></li>
+									<li class="list-group-item"><%=current.get(0)%></li>
 									<li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-plus-sign "></span> Numero de Historia Clinica: </li>
-									<li class="list-group-item"><%=current.getData_reporting()%></li>
+									<li class="list-group-item"><%=current.get(1)%></li>
 									<li class="list-group-item list-group-item-info"><span class="glyphicon glyphicon-list-alt "></span> Numero de DNI: </li>
-									<li class="list-group-item"><%=current.getReason_consultation()%></li>
+									<li class="list-group-item"><%=current.get(2)%></li>
 									<li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-eye-open "></span> Sexo: </li>
-									<li class="list-group-item"><%=current.getSick_time()%></li>
+									<li class="list-group-item"><%=current.get(3)%></li>
 									
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Edad: </li>
-									<li class="list-group-item"><%=current.getSigns_symptoms_main()%></li>
+									<li class="list-group-item"><%=current.get(4)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=current.getChronological_story()%></li>
+									<li class="list-group-item"><%=current.get(5)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=current.getBiological_functions()%></li>
+									<li class="list-group-item"><%=current.get(6)%></li>
 								
-									
+							
 								</ul>
 					      	</div>
 					      
-					     
+					     <%}else{%>	
+							<%}%>
 					      
 					      
 					      
@@ -204,16 +205,18 @@
 					    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
 					      <div class="panel-body">
 							
-												      
+							 <%if(current.size()>0){ %>			      
 					        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 					      		<ul class="list-group">
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=background.getFamily_background()%></li>
+									<li class="list-group-item"><%=background.get(0)%></li>
 									<li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-plus-sign "></span> Numero de Historia Clinica: </li>
-									<li class="list-group-item"><%=background.getPersonal_history() %></li>
+									<li class="list-group-item"><%=background.get(1) %></li>
 									
 								</ul>
 					      	</div>
+					      	   <%}else{%>	
+							<%}%>
 					   
 					      </div>
 					    </div>
@@ -230,25 +233,26 @@
 					    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
 					      <div class="panel-body">
 					        
-					      
+					      <%if(current.size()>0){ %>	
 							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 					      		<ul class="list-group">
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=physical.getVitalSigns_pa()%></li>
+									<li class="list-group-item"><%=physical.get(0)%></li>
 									<li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-plus-sign "></span> Numero de Historia Clinica: </li>
-									<li class="list-group-item"><%=physical.getVitalSigns_pulso()%></li>
+									<li class="list-group-item"><%=physical.get(1)%></li>
 									<li class="list-group-item list-group-item-info"><span class="glyphicon glyphicon-list-alt "></span> Numero de DNI: </li>
-									<li class="list-group-item"><%=physical.getVitalSigns_temp()%></li>
+									<li class="list-group-item"><%=physical.get(2)%></li>
 									<li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-eye-open "></span> Sexo: </li>
-									<li class="list-group-item"><%=physical.getVitalSigns_fc()%></li>
+									<li class="list-group-item"><%=physical.get(3)%></li>
 									
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Edad: </li>
-									<li class="list-group-item"><%=physical.getVitalSigns_frecResp()%></li>
+									<li class="list-group-item"><%=physical.get(4)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=physical.getClinica_examination()%></li>
+									<li class="list-group-item"><%=physical.get(5)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=physical.getOdontoestomatologico()%></li>
-								
+									<li class="list-group-item"><%=physical.get(6)%></li>
+							 <%}else{%>	
+							<%}%>
 									
 								</ul>
 					      	</div>					     
@@ -270,18 +274,19 @@
 					      <div class="panel-body">
 					        
 					        
-					       
+					        <%if(current.size()>0){ %>	
 							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 					      		<ul class="list-group">
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=diagnosis.getPresumptive_diagnosis()%></li>
+									<li class="list-group-item"><%=diagnosis.get(0)%></li>
 									<li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-plus-sign "></span> Numero de Historia Clinica: </li>
-									<li class="list-group-item"><%=diagnosis.getDefinitive_diagnosis()%></li>						
+									<li class="list-group-item"><%=diagnosis.get(1)%></li>						
 								
 									
 								</ul>
 					      	</div>	
-					   
+					   <%}else{%>	
+							<%}%>
 					      	
 					      						     
 					      </div>
@@ -299,16 +304,17 @@
 					    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
 					      <div class="panel-body">
 					     	 
-					     	
+					     	<%if(current.size()>0){ %>
 							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 					      		<ul class="list-group">
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=workplan.getWork_plan()%></li>
+									<li class="list-group-item"><%=workplan.get(0)%></li>
 									
 									
 								</ul>
 					      	</div>
-					      				      
+					      	<%}else{%>	
+							<%}%>			      
 					      
 					      </div>
 					    </div>
@@ -325,18 +331,19 @@
 					    <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
 					      <div class="panel-body">
 					        
-					      
+					      	<%if(current.size()>0){ %>
 					        
 							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 					      		<ul class="list-group">
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=forecast.getFore_cast()%></li>
+									<li class="list-group-item"><%=forecast.get(0)%></li>
 
 									
 								</ul>
 					      	</div>	
 					      	
-					      			     
+					      		<%}else{%>	
+							<%}%>		     
 					     
 					      </div>
 					    </div>
@@ -353,31 +360,32 @@
 					    <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
 					      <div class="panel-body">
 					        
-					        
+					        <%if(current.size()>0){ %>
 					        
 							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 					      		<ul class="list-group">
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=treatment.getTreatmentRecomendations()%></li>
+									<li class="list-group-item"><%=treatment.get(0)%></li>
 									<li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-plus-sign "></span> Numero de Historia Clinica: </li>
-									<li class="list-group-item"><%=treatment.getGeneric_drug_name()%></li>
+									<li class="list-group-item"><%=treatment.get(1)%></li>
 									<li class="list-group-item list-group-item-info"><span class="glyphicon glyphicon-list-alt "></span> Numero de DNI: </li>
-									<li class="list-group-item"><%=treatment.getDose()%></li>
+									<li class="list-group-item"><%=treatment.get(2)%></li>
 									<li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-eye-open "></span> Sexo: </li>
-									<li class="list-group-item"><%=treatment.getWay_administration()%></li>
+									<li class="list-group-item"><%=treatment.get(3)%></li>
 									
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Edad: </li>
-									<li class="list-group-item"><%=treatment.getCare()%></li>
+									<li class="list-group-item"><%=treatment.get(4)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=treatment.getHygiene_measures_dietary()%></li>
+									<li class="list-group-item"><%=treatment.get(5)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=treatment.getPreventive()%></li>
+									<li class="list-group-item"><%=treatment.get(6)%></li>
 								
 									
 								</ul>
 					      	</div>						     
 					     	
-					    
+					    	<%}else{%>	
+							<%}%>	
 					     
 					      </div>
 					    </div>
@@ -395,17 +403,18 @@
 					      <div class="panel-body">
 					       
 					       
-							 
+							 <%if(current.size()>0){ %>
 							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 					      		<ul class="list-group">
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=odontograma.getOdontogram()%></li>
+									<li class="list-group-item"><%=odontograma.get(0)%></li>
 
 									
 								</ul>
 					      	</div>					      
 					      	
-					   
+					   		<%}else{%>	
+							<%}%>	
 					      
 					      
 					      </div>

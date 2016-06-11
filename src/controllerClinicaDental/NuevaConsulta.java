@@ -32,6 +32,7 @@ public class NuevaConsulta extends HttpServlet {
 		} finally {
 			pm.close();
 			String queryKey=query.getKey();
+			query.setQueryId((String)misesion.getAttribute("patientId"));
 			misesion.setAttribute("queryKey",queryKey);
 			System.out.println(misesion.getAttribute("queryKey") + "imprimiendo la consulta");
 			System.out.println(query.getKey());
