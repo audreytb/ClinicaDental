@@ -17,10 +17,10 @@ import java.util.List;
 
 @SuppressWarnings("serial")
 public class ViewNuevaConsulta extends HttpServlet {
-	public void doGet(HttpServletRequest req, HttpServletResponse
+	public void doPost(HttpServletRequest request, HttpServletResponse
 			resp) throws ServletException, IOException {
 		PersistenceManager pm = PMF.get().getPersistenceManager();
-		HttpSession misesion= req.getSession();
+		HttpSession misesion= request.getSession();
 		
 		
 		String patientKey=(String)misesion.getAttribute("patientId");
@@ -36,26 +36,27 @@ public class ViewNuevaConsulta extends HttpServlet {
 		String query = "select from " + Query.class.getName() + " where queryId ==" +patientKey;		
 		List<Query> consultas = (List<Query>)pm.newQuery(query).execute();
 		
-		req.setAttribute("patient", paciente);
-		req.setAttribute("consultas", consultas);			
+		request.setAttribute("patient", paciente);
+		request.setAttribute("consultas", consultas);			
 		
-		req.setAttribute("background",(ArrayList<String>) misesion.getAttribute("background"));	
-		req.setAttribute("current", (ArrayList<String>) misesion.getAttribute("current"));	
-		req.setAttribute("diagnosis", (ArrayList<String>) misesion.getAttribute("diagnosis"));
-		req.setAttribute("forecast", (ArrayList<String>) misesion.getAttribute("forecast"));
-		req.setAttribute("odontograma", (ArrayList<String>) misesion.getAttribute("odontograma"));
-		req.setAttribute("discharge", (ArrayList<String>) misesion.getAttribute("discharge"));
-		req.setAttribute("physical", (ArrayList<String>) misesion.getAttribute("physical"));
-		req.setAttribute("treatment", (ArrayList<String>) misesion.getAttribute("treatment"));
-		req.setAttribute("workplan", (ArrayList<String>) misesion.getAttribute("workplan"));
+		request.setAttribute("background",(ArrayList<String>) misesion.getAttribute("background"));
+		request.setAttribute("current", (ArrayList<String>) misesion.getAttribute("current"));
+		request.setAttribute("diagnosis", (ArrayList<String>) misesion.getAttribute("diagnosis"));
+		request.setAttribute("forecast", (ArrayList<String>) misesion.getAttribute("forecast"));
+		request.setAttribute("odontograma", (ArrayList<String>) misesion.getAttribute("odontograma"));
+		request.setAttribute("discharge", (ArrayList<String>) misesion.getAttribute("discharge"));
+		request.setAttribute("physical", (ArrayList<String>) misesion.getAttribute("physical"));
+		request.setAttribute("treatment", (ArrayList<String>) misesion.getAttribute("treatment"));
+		request.setAttribute("workplan", (ArrayList<String>) misesion.getAttribute("workplan"));
 
-		RequestDispatcher dispatcher =req.getRequestDispatcher("queryHistory.jsp");
-		dispatcher.forward(req, resp);
+		RequestDispatcher dispatcher =request.getRequestDispatcher("/queryHistory.jsp");
+		dispatcher.forward(request, resp);
 	}
-	
+	/**
 	public void doPost(HttpServletRequest request, HttpServletResponse
 			response)
 					throws ServletException, IOException {
 		doGet(request, response);
 	}
+	**/
 }
