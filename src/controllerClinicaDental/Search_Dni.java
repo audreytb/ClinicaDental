@@ -11,7 +11,7 @@ import javax.servlet.http.*;
 import modelClinicaDental.PMF;
 import modelClinicaDental.Patient;
 import java.util.List;
-
+import javax.jdo.Query;
 @SuppressWarnings("serial")
 public class Search_Dni extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -28,20 +28,23 @@ public class Search_Dni extends HttpServlet {
 		
 		List<Patient> pacientes = (List<Patient>)pm.newQuery(query).execute();
 		if(pacientes.isEmpty()){
-			response.sendRedirect("registrar.jsp");
+			request.setAttribute("dni", dni);
+			RequestDispatcher dispatcher =getServletContext().getRequestDispatcher("/registrar.jsp");
+			dispatcher.forward(request, response);
+			
 		
+			
 		/**
 		req.setAttribute("pacientes", pacientes);
 		RequestDispatcher dispatcher =getServletContext().getRequestDispatcher("/viewPatient");
 		dispatcher.forward(req, resp);
-	// pm.deletePersistent(e);
+		// pm.deletePersistent(e);
 		**/
 		
 		}else{
-		System.out.println(query);
-		System.out.println(pacientes);
-		
-		
+		//System.out.println(query);
+		//System.out.println(pacientes);
+			
 		response.sendRedirect("/viewPatient");
 		misesion.setAttribute("patientId", pacientes.get(pacientes.size()-1).getKey());
 		}

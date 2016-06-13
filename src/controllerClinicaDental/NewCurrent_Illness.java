@@ -98,7 +98,7 @@ public class NewCurrent_Illness extends HttpServlet {
 					illnes.setSigns_symptoms_main(req.getParameter("signs_symptoms_main"));
 					illnes.setChronological_story(req.getParameter("chronological_story"));
 					illnes.setBiological_functions(req.getParameter("biological_functions"));
-					System.out.println(illnes);
+					//System.out.println(illnes);
 					
 					
 					current.set(0, req.getParameter("enfermedad_actual"));

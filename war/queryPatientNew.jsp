@@ -8,7 +8,7 @@
 <%
 	
 	ArrayList <String> patient=(ArrayList <String>)request.getAttribute("patient");
-	ArrayList <String> consultas=(ArrayList <String>)request.getAttribute("consultas");
+	//ArrayList <String> consultas=(ArrayList <String>)request.getAttribute("consultas");
 
 	//SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
 %>

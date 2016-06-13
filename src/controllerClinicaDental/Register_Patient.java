@@ -4,6 +4,7 @@ import modelClinicaDental.PMF;
 import javax.jdo.PersistenceManager;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -20,7 +21,7 @@ public class Register_Patient extends HttpServlet {
 		
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		
-		Patient a = new Patient(
+		Patient paciente = new Patient(
 				request.getParameter("name"),
 				new Integer(request.getParameter("number_historia_clinica")).intValue(),
 				request.getParameter("number_dni"),
@@ -41,14 +42,35 @@ public class Register_Patient extends HttpServlet {
 				);
 		
 				
-		System.out.println(a);
+		//System.out.println(paciente);
 		try {
-			pm.makePersistent(a);
-			System.out.println(a);
+			pm.makePersistent(paciente);
+			//System.out.println(paciente);
 		} finally {
 			pm.close();
 		}
-		misesion.setAttribute("patientId",a.getKey());
+		ArrayList <String> patient=(ArrayList <String>)misesion.getAttribute("patient");
+		patient.add(paciente.getName());
+		patient.add(Integer.toString(paciente.getNumber_historia_clinica()));
+		patient.add(paciente.getNumber_dni());
+		patient.add(Integer.toString(paciente.getDate_time_care()));
+		patient.add(Integer.toString(paciente.getOpening_date_medical_history()));
+		patient.add(paciente.getSex());
+		patient.add(Integer.toString(paciente.getAge()));
+		patient.add(paciente.getBirthplace());
+		patient.add(Integer.toString(paciente.getBirthdate()));
+		patient.add(paciente.getDegree_instruction());
+		patient.add(paciente.getRace());
+		patient.add(paciente.getOccupation());
+		patient.add(paciente.getReligion());
+		patient.add(paciente.getCvil_status());
+		patient.add(paciente.getPlace_origin());
+		patient.add(paciente.getCurrent_address());
+		patient.add(paciente.getName_lastName_companion());
+		
+		misesion.setAttribute("patient", patient);
+		
+		misesion.setAttribute("patientId",paciente.getKey());
 		//resp.sendRedirect("viewPatient?action=patientDisplay&patientId="+a.getId());
 		response.sendRedirect("viewPatientNew");
 		//System.out.println("aqui");

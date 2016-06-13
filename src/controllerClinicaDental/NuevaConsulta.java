@@ -1,5 +1,6 @@
 package controllerClinicaDental;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,29 +19,22 @@ public class NuevaConsulta extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException, ServletException {
 		PersistenceManager pm = PMF.get().getPersistenceManager();
-		
-		Query query=new Query();
 		HttpSession misesion= req.getSession();
-		
-		
-		resp.setContentType("text/plain");
-		
-	
+		Query query=new Query((String)misesion.getAttribute("patientId"));
+							
 		try {
 			pm.makePersistent(query);
 			
 		} finally {
 			pm.close();
+			
 			String queryKey=query.getKey();
-			query.setQueryId((String)misesion.getAttribute("patientId"));
 			misesion.setAttribute("queryKey",queryKey);
-			System.out.println(misesion.getAttribute("queryKey") + "imprimiendo la consulta");
-			System.out.println(query.getKey());
-			System.out.println(queryKey);
-			System.out.println(query);
 			
 			
-		}
+			//System.out.println(query.getQueryId());
+					
+		} 
 		
 		resp.sendRedirect("nuevoHistorial.jsp");
 	}
@@ -50,3 +44,7 @@ public class NuevaConsulta extends HttpServlet {
 		doGet(request, response);
 	}
 }
+
+		//tad diccionario--arboles
+		//compresion de datos--
+		//ordenacinamiento quic heap merson insersort

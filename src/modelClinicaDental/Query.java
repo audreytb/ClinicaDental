@@ -43,6 +43,11 @@ public class Query{
 		return KeyFactory.keyToString(key);
 	}
 
+	public Query(String queryId) {
+		super();
+		this.queryId = queryId;
+	}
+
 	public void setKey(String key) {
 		
 		Key keyQuery = KeyFactory.stringToKey(key);

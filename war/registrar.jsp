@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%
+	
+	String dni =(String)request.getAttribute("dni");
+
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -37,7 +42,7 @@
 						
 						<label for="Dni" class="control-label col-lg-1 col-md-3 col-sm-3 col-xs-12">Numero de DNI:</label>
 						<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-							<input type="text" class="form-control" id="dni" name="number_dni" value="73252623"><br>
+							<input type="text" class="form-control" id="dni" name="number_dni" value="<%=dni%>"><br>
 						</div>
 						
 						<label for="Fecha&Hora" class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Fecha y Hora de Atención:</label>
