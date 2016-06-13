@@ -43,7 +43,7 @@
 							<div role="tabpanel"class="tab-pane active"id="seccion1">
 								<div class=container-fluid>
 									<h3>Enfermedad Actual</h3>
-									<form action="newCurrent_Illness" class="form-horizontal" >
+									<form action="newCurrent_Illness" class="form-horizontal" method="post">
 										<div class="form-group container-fluid">
 											<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px" name="enfermedad_actual"></textarea>
 										</div>

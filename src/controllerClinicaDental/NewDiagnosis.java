@@ -40,7 +40,7 @@ public class NewDiagnosis extends HttpServlet {
 			misesion.setAttribute("clickBackground", click);
 			diagnosis.add(req.getParameter("presumptive_diagnosis"));
 			diagnosis.add(req.getParameter("definitive_diagnosis"));
-			misesion.setAttribute("diagonis", diagnosis);
+			misesion.setAttribute("diagnosis", diagnosis);
 			// persist the entity
 			try {
 				pm.makePersistent(consulta);
@@ -76,7 +76,7 @@ public class NewDiagnosis extends HttpServlet {
 					
 					diagnosis.set(0, req.getParameter("presumptive_diagnosis"));
 					diagnosis.set(1, req.getParameter("definitive_diagnosis"));
-					misesion.setAttribute("diagonis", diagnosis);
+					misesion.setAttribute("diagnosis", diagnosis);
 			} finally {
 					
 			    	pm.close();
@@ -87,6 +87,11 @@ public class NewDiagnosis extends HttpServlet {
 		}
 			
 				
+	}
+	public void doPost(HttpServletRequest request, HttpServletResponse
+			response)
+					throws ServletException, IOException {
+		doGet(request, response);
 	}
 }
 

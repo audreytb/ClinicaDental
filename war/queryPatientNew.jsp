@@ -3,11 +3,12 @@
 <%@ page import="modelClinicaDental.*"%>
 <%@ page import="modelClinicaDental.Query"%>
 <%@ page import="java.util.List"%>
+<%@ page import="java.util.ArrayList"%>
 
 <%
 	
-	Patient patient = (Patient) request.getAttribute("patient");
-	List<Query> consultas = (List<Query>) request.getAttribute("consultas");
+	ArrayList <String> patient=(ArrayList <String>)request.getAttribute("patient");
+	ArrayList <String> consultas=(ArrayList <String>)request.getAttribute("consultas");
 
 	//SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
 %>
@@ -96,40 +97,40 @@
 					      	<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 					      		<ul class="list-group">
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
-									<li class="list-group-item"><%=patient.getName()%></li>
+									<li class="list-group-item"><%=patient.get(0)%></li>
 									<li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-plus-sign "></span> Numero de Historia Clinica: </li>
-									<li class="list-group-item"><%=patient.getNumber_historia_clinica()%></li>
+									<li class="list-group-item"><%=patient.get(1)%></li>
 									<li class="list-group-item list-group-item-info"><span class="glyphicon glyphicon-list-alt "></span> Numero de DNI: </li>
-									<li class="list-group-item"><%=patient.getNumber_dni()%></li>
+									<li class="list-group-item"><%=patient.get(2)%></li>
 									<li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-eye-open "></span> Sexo: </li>
-									<li class="list-group-item"><%=patient.getSex()%></li>
+									<li class="list-group-item"><%=patient.get(3)%></li>
 									
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Edad: </li>
-									<li class="list-group-item"><%=patient.getAge() %></li>
+									<li class="list-group-item"><%=patient.get(4) %></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=patient.getReligion()%></li>
+									<li class="list-group-item"><%=patient.get(5)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=patient.getBirthplace()%></li>
+									<li class="list-group-item"><%=patient.get(6)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=patient.getBirthdate()%></li>
+									<li class="list-group-item"><%=patient.get(7)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=patient.getReligion()%></li>
+									<li class="list-group-item"><%=patient.get(8)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=patient.getDegree_instruction()%></li>
+									<li class="list-group-item"><%=patient.get(9)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=patient.getRace()%></li>
+									<li class="list-group-item"><%=patient.get(10)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=patient.getOccupation()%></li>
+									<li class="list-group-item"><%=patient.get(11)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=patient.getReligion()%></li>
+									<li class="list-group-item"><%=patient.get(12)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=patient.getCvil_status()%></li>
+									<li class="list-group-item"><%=patient.get(13)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=patient.getPlace_origin()%></li>
+									<li class="list-group-item"><%=patient.get(14)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=patient.getCurrent_address()%></li>
+									<li class="list-group-item"><%=patient.get(15)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
-									<li class="list-group-item"><%=patient.getName_lastName_companion()%></li>
+									<li class="list-group-item"><%=patient.get(16)%></li>
 								</ul>
 					      	</div>
 					      	

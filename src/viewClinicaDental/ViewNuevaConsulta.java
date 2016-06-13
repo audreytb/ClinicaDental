@@ -17,7 +17,7 @@ import java.util.List;
 
 @SuppressWarnings("serial")
 public class ViewNuevaConsulta extends HttpServlet {
-	public void doPost(HttpServletRequest request, HttpServletResponse
+	public void doGet(HttpServletRequest request, HttpServletResponse
 			resp) throws ServletException, IOException {
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		HttpSession misesion= request.getSession();
@@ -48,15 +48,24 @@ public class ViewNuevaConsulta extends HttpServlet {
 		request.setAttribute("physical", (ArrayList<String>) misesion.getAttribute("physical"));
 		request.setAttribute("treatment", (ArrayList<String>) misesion.getAttribute("treatment"));
 		request.setAttribute("workplan", (ArrayList<String>) misesion.getAttribute("workplan"));
-
+		
+		System.out.println((ArrayList<String>) misesion.getAttribute("background"));
+		System.out.println((ArrayList<String>) misesion.getAttribute("current"));
+		System.out.println((ArrayList<String>) misesion.getAttribute("diagnosis"));
+		System.out.println((ArrayList<String>) misesion.getAttribute("forecast"));
+		System.out.println((ArrayList<String>) misesion.getAttribute("odontograma"));
+		System.out.println((ArrayList<String>) misesion.getAttribute("discharge"));
+		System.out.println((ArrayList<String>) misesion.getAttribute("forecast"));
+	
+		System.out.println((ArrayList<String>) misesion.getAttribute("treatment"));
+		System.out.println((ArrayList<String>) misesion.getAttribute("workplan"));
+		
 		RequestDispatcher dispatcher =request.getRequestDispatcher("/queryHistory.jsp");
 		dispatcher.forward(request, resp);
 	}
-	/**
 	public void doPost(HttpServletRequest request, HttpServletResponse
 			response)
 					throws ServletException, IOException {
 		doGet(request, response);
 	}
-	**/
 }

@@ -26,12 +26,39 @@ public class ViewPatient extends HttpServlet {
 		
 		Key keypatient=KeyFactory.stringToKey(patientId);
 		Patient paciente = pm.getObjectById(Patient.class, keypatient);
+		ArrayList <String> patient=(ArrayList <String>)misesion.getAttribute("patient");
+		patient.add(paciente.getName());
+		patient.add(Integer.toString(paciente.getNumber_historia_clinica()));
+		patient.add(paciente.getNumber_dni());
+		patient.add(Integer.toString(paciente.getDate_time_care()));
+		patient.add(Integer.toString(paciente.getOpening_date_medical_history()));
+		patient.add(paciente.getSex());
+		patient.add(Integer.toString(paciente.getAge()));
+		patient.add(paciente.getBirthplace());
+		patient.add(Integer.toString(paciente.getBirthdate()));
+		patient.add(paciente.getDegree_instruction());
+		patient.add(paciente.getRace());
+		patient.add(paciente.getOccupation());
+		patient.add(paciente.getReligion());
+		patient.add(paciente.getCvil_status());
+		patient.add(paciente.getPlace_origin());
+		patient.add(paciente.getCurrent_address());
+		patient.add(paciente.getName_lastName_companion());
+	
+		
 		
 		String query = "select from " + Query.class.getName() + " where queryId ==" +patientId;		
 		List<Query> consultas = (List<Query>)pm.newQuery(query).execute();
+		ArrayList <String> consultasId=(ArrayList <String>)misesion.getAttribute("consultas");
+		for(int i=0; i<consultas.size();i++){
+			consultasId.add(consultas.get(i).getQueryId());
+		}
+		//String consultaAc=consultas.get(consultas.size()-1).getQueryId();
 		
-		req.setAttribute("patient", paciente);
-		req.setAttribute("consultas", consultas);
+		
+		req.setAttribute("patient", patient);
+		req.setAttribute("consultas", consultasId);
+		
 		
 		if(misesion.getAttribute("queryKey")==null){
 			resp.sendRedirect("viewPatientNew");
@@ -49,10 +76,23 @@ public class ViewPatient extends HttpServlet {
 			req.setAttribute("workplan", (ArrayList<String>) misesion.getAttribute("workplan"));
 			
 			
+			System.out.println(consultas);
+			System.out.println(paciente);
+			
+			System.out.println((ArrayList<String>) misesion.getAttribute("background"));
+			System.out.println((ArrayList<String>) misesion.getAttribute("current"));
+			System.out.println((ArrayList<String>) misesion.getAttribute("diagnosis"));
+			System.out.println((ArrayList<String>) misesion.getAttribute("forecast"));
+			System.out.println((ArrayList<String>) misesion.getAttribute("odontograma"));
+			System.out.println((ArrayList<String>) misesion.getAttribute("discharge"));
+			System.out.println((ArrayList<String>) misesion.getAttribute("forecast"));
+		
+			System.out.println((ArrayList<String>) misesion.getAttribute("treatment"));
+			System.out.println((ArrayList<String>) misesion.getAttribute("workplan"));
 			pm.close();
 			RequestDispatcher dispatcher =req.getRequestDispatcher("/queryPatient.jsp");
 			dispatcher.forward(req, resp);
-		
+			
 		}
 		
 		

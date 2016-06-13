@@ -43,4 +43,9 @@ public class GuardarConsulta extends HttpServlet {
 		System.out.println(q.getKey());
 		pm.deletePersistentAll(illnes);
 	}
+	public void doPost(HttpServletRequest request, HttpServletResponse
+			response)
+					throws ServletException, IOException {
+		doGet(request, response);
+	}
 }

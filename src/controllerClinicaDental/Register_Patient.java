@@ -22,10 +22,8 @@ public class Register_Patient extends HttpServlet {
 		
 		Patient a = new Patient(
 				request.getParameter("name"),
-				
 				new Integer(request.getParameter("number_historia_clinica")).intValue(),
 				request.getParameter("number_dni"),
-				
 				new Integer(request.getParameter("date_time_care")).intValue(),
 				new Integer(request.getParameter("opening_date_medical_history")).intValue(),
 				request.getParameter("sex"),
@@ -58,5 +56,10 @@ public class Register_Patient extends HttpServlet {
 		//System.out.println(a.getId());
 		//System.out.println(a);
 		
+	}
+	public void doPost(HttpServletRequest request, HttpServletResponse
+			response)
+					throws ServletException, IOException {
+		doGet(request, response);
 	}
 }

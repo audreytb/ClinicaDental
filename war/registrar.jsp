@@ -23,7 +23,7 @@
 					<h3>Nuevo Registro de Usuario</h3>
 				</article> 
 				<br>
-				<form action="register_Patient" class="form-horizontal" >
+				<form action="register_Patient" method="post" class="form-horizontal" >
 					<div class="form-group ">
 						<label for="Nombre&Apellidos" class="control-label col-lg-2 col-md-3 col-sm-3 col-xs-12">Nombre y Apellidos Completos:</label>
 						<div class="col-lg-7 col-md-6 col-sm-3 col-xs-12">

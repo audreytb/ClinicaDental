@@ -30,7 +30,10 @@ public class Query{
 	@Persistent private Workplan workplan;
 	**/
 	//@Persistent private Patient patient;
-	@Persistent private String queryId;
+	@Persistent private String queryId;//@Persistent private String patientId; creando identificador de patient
+	
+	
+	
 
 	public Query() {
 		
@@ -53,6 +56,11 @@ public class Query{
 
 	public void setQueryId(String queryId) {
 		this.queryId = queryId;
+	}
+
+	@Override
+	public String toString() {
+		return "Query [key=" + key + ", queryId=" + queryId + "]";
 	}
 
 	

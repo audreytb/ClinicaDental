@@ -17,17 +17,17 @@ public class Search_Dni extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 		HttpSession misesion= request.getSession();
+		
 		String dni=request.getParameter("dni");
 		misesion.setAttribute("dni", dni);
+		
 		System.out.println(dni);
+		
 		PersistenceManager pm = PMF.get().getPersistenceManager();
-		
-		
-		
 		String query = "select from " + Patient.class.getName() + " where number_dni == '"+dni+"'";
-		List<Patient> pacientes = (List<Patient>)pm.newQuery(query).execute();
 		
-		if(pacientes.isEmpty())
+		List<Patient> pacientes = (List<Patient>)pm.newQuery(query).execute();
+		if(pacientes.isEmpty()){
 			response.sendRedirect("registrar.jsp");
 		
 		/**
@@ -37,11 +37,18 @@ public class Search_Dni extends HttpServlet {
 	// pm.deletePersistent(e);
 		**/
 		
-		else{
+		}else{
 		System.out.println(query);
 		System.out.println(pacientes);
+		
+		
 		response.sendRedirect("/viewPatient");
 		misesion.setAttribute("patientId", pacientes.get(pacientes.size()-1).getKey());
 		}
+	}
+	public void doPost(HttpServletRequest request, HttpServletResponse
+			response)
+					throws ServletException, IOException {
+		doGet(request, response);
 	}
 }

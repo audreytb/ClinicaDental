@@ -67,10 +67,10 @@
 							<div role="tabpanel"class="tab-pane active"id="seccion1">
 								<div class=container-fluid>
 									<h3>Enfermedad Actual</h3>
-									<form action="newCurrent_Illness" class="form-horizontal" >
+									<form action="newCurrent_Illness" method="post" class="form-horizontal" >
 									<%if(current.size()>0){ %>
 										<div class="form-group container-fluid">
-											<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px" name="enfermedad_actual" value="<%=current.get(0)%>"></textarea>
+											<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px" name="enfermedad_actual" ><%=current.get(0)%></textarea>
 										</div>
 										
 										<div class="form-group ">
@@ -123,7 +123,7 @@
 										</div>
 									<%}else{%>
 									<div class="form-group container-fluid">
-											<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px" name="enfermedad_actual" value=""></textarea>
+											<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px" name="enfermedad_actual" ></textarea>
 										</div>
 										
 										<div class="form-group ">
@@ -192,7 +192,7 @@
 								<div class="container-fluid">
 									<h3>Antecedentes</h3>
 									<div class="container-fluid">
-										<form action="newBackground" class="form-horizontal" >
+										<form action="newBackground" method="post" class="form-horizontal" >
 										<%if(background.size()>0){ %>				
 											<div class="form-group ">
 												<label for="antecedentesFam" class="control-label col-md-2 col-lg-3">Antecedentes Familiares:</label>
@@ -238,7 +238,7 @@
 							<div role="tabpanel"class="tab-pane"id="seccion3">
 								<div class="container-fluid">
 									<h3>Exploracion Fisica</h3>
-									<form action="newPhysicalExploration" class="form-horizontal" >
+									<form action="newPhysicalExploration" method="post" class="form-horizontal" >
 									<%if(physical.size()>0){ %>	
 										<div class="form-group ">
 											<label for="P.A." class="control-label col-lg-2 col-md-2 col-sm-3 col-xs-12">Signos Vitales P.A.</label>
@@ -337,7 +337,7 @@
 							<div role="tabpanel"class="tab-pane"id="seccion4">
 								<div class="container-fluid">
 									<h3>Diagnostico (CIE 10)</h3>
-									<form action="newDiagnosis" class="form-horizontal" >
+									<form action="newDiagnosis" method="post" class="form-horizontal" >
 									<%if(diagnosis.size()>0){ %>	
 										<div class="form-group ">
 											<label for="diagPres" class="control-label col-lg-2 col-md-6 col-sm-3 col-xs-12">Diagnostico Presuntivo:</label>
@@ -381,7 +381,7 @@
 							<div role="tabpanel"class="tab-pane"id="seccion5">
 								<div class="container-fluid">
 									<h3>Plan de Trabajo</h3>
-									<form action="newWorkplan" class="form-horizontal" >
+									<form action="newWorkplan" method="post" class="form-horizontal" >
 									<%if(workplan.size()>0){ %>	
 										<div class="form-group ">
 											<div div class="col-md-10 col-lg-12">
@@ -409,7 +409,7 @@
 							<div role="tabpanel"class="tab-pane"id="seccion6">
 								<div class="container-fluid">
 									<h3>Pronóstico</h3>
-									<form action="newForecast" class="form-horizontal" >
+									<form action="newForecast" method="post" class="form-horizontal" >
 									<%if(forecast.size()>0){ %>	
 										<div class="form-group ">
 											<div div class="col-md-10 col-lg-12">
@@ -438,7 +438,7 @@
 							<div role="tabpanel"class="tab-pane"id="seccion7">
 								<div class=container-fluid>
 									<h3>Tratamiento/ Recomendaciones</h3>
-									<form action="newTreatment_Recomendation" class="form-horizontal" >
+									<form action="newTreatment_Recomendation" method="post" class="form-horizontal" >
 									<%if(treatment.size()>0){ %>	
 										<div class="form-group container-fluid">
 											<textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12" rows="5px" name="treatmentRecomendations" value="<%=treatment.get(0) %>"></textarea>
@@ -590,7 +590,7 @@
 							<div role="tabpanel"class="tab-pane"id="seccion8">
 								<div class="container-fluid">
 									<h3>Odontograma</h3>
-									<form action="newOdontograma" class="form-horizontal" >
+									<form action="newOdontograma" method="post" class="form-horizontal" >
 									<%if(odontograma.size()>0){ %>
 										<div class="form-group ">
 											<div div class="col-md-10 col-lg-12">
