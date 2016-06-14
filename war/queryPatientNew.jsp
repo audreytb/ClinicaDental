@@ -102,34 +102,34 @@
 									<li class="list-group-item"><%=patient.get(1)%></li>
 									<li class="list-group-item list-group-item-info"><span class="glyphicon glyphicon-list-alt "></span> Numero de DNI: </li>
 									<li class="list-group-item"><%=patient.get(2)%></li>
-									<li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-eye-open "></span> Sexo: </li>
+									<li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-sound-5-1 "></span> Fecha y Hora de Atención: </li>
 									<li class="list-group-item"><%=patient.get(3)%></li>
 									
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Edad: </li>
+									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-sound-6-1 "></span> Fecha de Apertura de Historia Clinica: </li>
 									<li class="list-group-item"><%=patient.get(4) %></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
+									<li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-eye-open "></span> Sexo: </li>
 									<li class="list-group-item"><%=patient.get(5)%></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
+									<li class="list-group-item list-group-item-info"><span class="glyphicon glyphicon-sound-7-1 "></span> Edad: </li>
 									<li class="list-group-item"><%=patient.get(6)%></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
+									<li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-baby-formula"></span> Lugar de Nacimiento: </li>
 									<li class="list-group-item"><%=patient.get(7)%></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
+									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-calendar"></span> Fecha de Nacimiento: </li>
 									<li class="list-group-item"><%=patient.get(8)%></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
+									<li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-education"></span> Grado de Instrucción: </li>
 									<li class="list-group-item"><%=patient.get(9)%></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
+									<li class="list-group-item list-group-item-info"><span class="glyphicon glyphicon-tower"></span> Raza: </li>
 									<li class="list-group-item"><%=patient.get(10)%></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
+									<li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-bishop"></span> Ocupación: </li>
 									<li class="list-group-item"><%=patient.get(11)%></li>
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
 									<li class="list-group-item"><%=patient.get(12)%></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
+									<li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-glass"></span> Estado Civil: </li>
 									<li class="list-group-item"><%=patient.get(13)%></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
+									<li class="list-group-item list-group-item-info"><span class="glyphicon glyphicon-map-marker"></span> Lugar de Procedencia: </li>
 									<li class="list-group-item"><%=patient.get(14)%></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
+									<li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-home"></span> Domicilio Actual: </li>
 									<li class="list-group-item"><%=patient.get(15)%></li>
-									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-plus "></span> Religion: </li>
+									<li class="list-group-item list-group-item-danger"><span class="glyphicon glyphicon-ok"></span> Nombre y Apellidos del Acompañante: </li>
 									<li class="list-group-item"><%=patient.get(16)%></li>
 								</ul>
 					      	</div>
