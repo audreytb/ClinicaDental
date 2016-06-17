@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import modelClinicaDental.Background;
 import modelClinicaDental.Forecast;
-import modelClinicaDental.Query;
+import modelClinicaDental.Querys;
 import javax.jdo.PersistenceManager;
 import modelClinicaDental.PMF;
 import com.google.appengine.api.datastore.Key;

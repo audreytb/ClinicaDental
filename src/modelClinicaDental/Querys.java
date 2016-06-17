@@ -12,7 +12,7 @@ import javax.jdo.annotations.Persistent;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
-public class Query{
+public class Querys{
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY) 
 	private Key key;
@@ -35,7 +35,7 @@ public class Query{
 	
 	
 
-	public Query() {
+	public Querys() {
 		
 	}
 
@@ -43,7 +43,7 @@ public class Query{
 		return KeyFactory.keyToString(key);
 	}
 
-	public Query(String queryId) {
+	public Querys(String queryId) {
 		super();
 		this.queryId = queryId;
 	}
@@ -52,7 +52,7 @@ public class Query{
 		
 		Key keyQuery = KeyFactory.stringToKey(key);
 		this.key = KeyFactory.createKey(keyQuery,
-				Query.class.getSimpleName(), java.util.UUID.randomUUID().toString());
+				Querys.class.getSimpleName(), java.util.UUID.randomUUID().toString());
 	}
 
 	public String getQueryId() {

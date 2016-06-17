@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 import modelClinicaDental.Current_Illness;
-import modelClinicaDental.Query;
+import modelClinicaDental.Querys;
 import javax.jdo.PersistenceManager;
 import modelClinicaDental.PMF;
 import com.google.appengine.api.datastore.Key;
@@ -28,7 +28,7 @@ public class GuardarConsulta extends HttpServlet {
 		Key keyquery = KeyFactory.stringToKey((String)misesion.getAttribute("queryKey"));
 		
 		
-		Query q = pm.getObjectById(Query.class, keyquery);
+		Querys q = pm.getObjectById(Querys.class, keyquery);
 		
 		String query = "select from " +
 				Current_Illness.class.getName() + " where current_illnesId =="

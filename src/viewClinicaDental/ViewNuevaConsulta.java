@@ -10,7 +10,7 @@ import modelClinicaDental.Patient;
 import javax.jdo.PersistenceManager;
 
 import modelClinicaDental.PMF;
-import modelClinicaDental.Query;
+import modelClinicaDental.Querys;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,8 +33,8 @@ public class ViewNuevaConsulta extends HttpServlet {
 		Key keypatient=KeyFactory.stringToKey(patientKey);
 		Patient paciente = pm.getObjectById(Patient.class, keypatient);
 		
-		String query = "select from " + Query.class.getName() + " where queryId ==" +patientKey;		
-		List<Query> consultas = (List<Query>)pm.newQuery(query).execute();
+		String query = "select from " + Querys.class.getName() + " where queryId ==" +patientKey;		
+		List<Querys> consultas = (List<Querys>)pm.newQuery(query).execute();
 		
 		request.setAttribute("patient", paciente);
 		request.setAttribute("consultas", consultas);			

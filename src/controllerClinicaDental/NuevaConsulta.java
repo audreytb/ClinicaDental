@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import modelClinicaDental.Current_Illness;
-import modelClinicaDental.Query;
+import modelClinicaDental.Querys;
 import javax.jdo.PersistenceManager;
 import modelClinicaDental.PMF;
 import com.google.appengine.api.datastore.Key;
@@ -20,7 +20,7 @@ public class NuevaConsulta extends HttpServlet {
 			throws IOException, ServletException {
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		HttpSession misesion= req.getSession();
-		Query query=new Query((String)misesion.getAttribute("patientId"));
+		Querys query=new Querys((String)misesion.getAttribute("patientId"));
 							
 		try {
 			pm.makePersistent(query);

@@ -7,7 +7,7 @@ import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
-import modelClinicaDental.Query;
+import modelClinicaDental.Querys;
 
 
 @SuppressWarnings("serial")

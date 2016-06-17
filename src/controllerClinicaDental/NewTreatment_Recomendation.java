@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import modelClinicaDental.Treatment_Recomendation;
-import modelClinicaDental.Query;
+import modelClinicaDental.Querys;
 import javax.jdo.PersistenceManager;
 
 import modelClinicaDental.Odontograma;

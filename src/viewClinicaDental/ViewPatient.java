@@ -71,12 +71,12 @@ public class ViewPatient extends HttpServlet {
 		//termino debe enviarse
 		
 		
-		String query = "select from " + Query.class.getName() + " where queryId ==" +patientId;		
-		List<Query> consultas = (List<Query>)pm.newQuery(query).execute();
-		
+		String query = "select from " + Querys.class.getName() + " where queryId ==" +patientId;		
+		List<Querys> consultas = (List<Querys>)pm.newQuery(query).execute();
+		/**
 		ArrayList <String> consultasId=(ArrayList <String>)misesion.getAttribute("consultas");
 		consultasId.add(consultas.get(consultas.size()-1).getKey());
-		/**
+		
 		if(consultasId.size()!=consultas.size()){
 			consultasId.clear();
 			for(int i=0; i<consultas.size();i++){
@@ -90,16 +90,7 @@ public class ViewPatient extends HttpServlet {
 			}
 		}
 		**/
-		misesion.setAttribute("consultas", consultasId);
-		System.out.println("viendo consultas "+consultas);
-		//System.out.println(consultasId);
-		//String consultaAc=consultas.get(consultas.size()-1).getQueryId();
 		
-		
-		
-		System.out.println("viendo patient"+patient);
-		System.out.println("viendo consultasId"+consultasId);
-		//System.out.println(queryKey);
 		/**
 		if(misesion.getAttribute("queryKey")==null){
 			resp.sendRedirect("viewPatientNew");
@@ -120,7 +111,7 @@ public class ViewPatient extends HttpServlet {
 		req.setAttribute("treatment", (ArrayList<String>) misesion.getAttribute("treatment"));
 		req.setAttribute("workplan", (ArrayList<String>) misesion.getAttribute("workplan"));
 		
-		
+		/**
 		System.out.println(patient);
 		System.out.println(consultasId);
 		
@@ -134,7 +125,7 @@ public class ViewPatient extends HttpServlet {
 	
 		System.out.println((ArrayList<String>) misesion.getAttribute("treatment"));
 		System.out.println((ArrayList<String>) misesion.getAttribute("workplan"));
-		 
+		 **/
 		pm.close();
 		System.out.println("Está linea muestra que entro");
 		RequestDispatcher dispatcher =req.getRequestDispatcher("/queryPatient.jsp");
