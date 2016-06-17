@@ -205,7 +205,7 @@
 					    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
 					      <div class="panel-body">
 							
-							 <%if(current.size()>0){ %>			      
+							 <%if(background.size()>0){ %>			      
 					        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 					      		<ul class="list-group">
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
@@ -233,7 +233,7 @@
 					    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
 					      <div class="panel-body">
 					        
-					      <%if(current.size()>0){ %>	
+					      <%if(physical.size()>0){ %>	
 							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 					      		<ul class="list-group">
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
@@ -274,7 +274,7 @@
 					      <div class="panel-body">
 					        
 					        
-					        <%if(current.size()>0){ %>	
+					        <%if(diagnosis.size()>0){ %>	
 							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 					      		<ul class="list-group">
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
@@ -304,7 +304,7 @@
 					    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
 					      <div class="panel-body">
 					     	 
-					     	<%if(current.size()>0){ %>
+					     	<%if(workplan.size()>0){ %>
 							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 					      		<ul class="list-group">
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
@@ -331,7 +331,7 @@
 					    <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
 					      <div class="panel-body">
 					        
-					      	<%if(current.size()>0){ %>
+					      	<%if(forecast.size()>0){ %>
 					        
 							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 					      		<ul class="list-group">
@@ -360,7 +360,7 @@
 					    <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
 					      <div class="panel-body">
 					        
-					        <%if(current.size()>0){ %>
+					        <%if(treatment.size()>0){ %>
 					        
 							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 					      		<ul class="list-group">
@@ -403,7 +403,7 @@
 					      <div class="panel-body">
 					       
 					       
-							 <%if(current.size()>0){ %>
+							 <%if(odontograma.size()>0){ %>
 							 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
 					      		<ul class="list-group">
 									<li class="list-group-item list-group-item-success"><span class="glyphicon glyphicon-user "></span> Nombre: </li>
